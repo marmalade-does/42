@@ -1,16 +1,10 @@
 
-
-
-
-
 #include <unistd.h>
 
-void main ()
+
+int main (void)
 {
-    write(1, "test complete", 13);
+    write(1, "hello world", 11);
+    return (1);
 }
-
-
-
-
 
