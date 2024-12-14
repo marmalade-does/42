@@ -1,9 +1,8 @@
 #include "libft.h"
 
-
-
 // this implementatioin is very sus, double-check
 
+static int		ft_strlen(const char *str);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -27,4 +26,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (i < size)
 		dst[i] = '\0';
 	return (dst_len + src_len);
+}
+
+static int		ft_strlen(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

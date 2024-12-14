@@ -1,22 +1,7 @@
 
 #include "libft.h"
 
-static unsigned int	ft_number_size(int number)
-{
-	unsigned int	length;
-	
-	length = 0;
-	if (number == 0)
-		return (1);
-	if (number < 0)
-		length += 1;
-	while (number != 0)
-	{
-		number /= 10;
-		length++;
-	}
-	return (length);
-}
+static unsigned int	ft_number_size(int number);
 
 char	*ft_itoa(int n)
 {
@@ -45,4 +30,21 @@ char	*ft_itoa(int n)
 		length--;
 	}
 	return (string);
+}
+
+static unsigned int	ft_number_size(int number)
+{
+	unsigned int	length;
+	
+	length = 0;
+	if (number == 0)
+		return (1);
+	if (number < 0)
+		length += 1;
+	while (number != 0)
+	{
+		number /= 10;
+		length++;
+	}
+	return (length);
 }
