@@ -64,7 +64,7 @@ void	ft_unsigned_int(unsigned int u, int *length)
 
 void	ft_pointer(size_t pointer, int *length)
 {
-	char	str[25];
+	char	str[25]; // isn't this way of assining a str incorrect? (ege fake dynamic programming)
 	int		i;
 	char	*base_character;
 

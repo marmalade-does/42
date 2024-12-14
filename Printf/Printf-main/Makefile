@@ -1,3 +1,5 @@
+# Need to change the make file if you want to incorporate the bonus
+
 NAME	= libftprintf.a
 
 SRCS	= ./sources/ft_printf.c \
