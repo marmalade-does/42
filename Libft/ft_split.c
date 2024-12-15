@@ -1,20 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
-
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdlib.h>
-#include <unistd.h>
-
+#include <stdio.h>
 
 // How to improve
 // Make it still work for arbitrairy preceding or succeding delemeters
@@ -69,7 +55,7 @@ char    **ft_split(char const *s, char c)
 static char *malloc_cpy_str(char *s, int *pos, char c)
 {
     char *token;
-    int start
+    int start;
     
     while(s[*pos] == c)
     {
@@ -83,13 +69,57 @@ static char *malloc_cpy_str(char *s, int *pos, char c)
     token = (char *)malloc(sizeof(char) * (*pos - start)); // don't need to allocate '+1' becuase delimeter isn't copied over.
     if(token == NULL)
         return (NULL);
-    strlcpy(token, &s[start + 1], (pos - start));
+    strncpy(token, &s[start + 1], (*pos - start));
     return(token);
 }
 
 /*I think this is correct but IDK hahaha*/
 
-static size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+
+static void    free_split(char **result)
+{
+    int i;
+
+    i = 0;
+    while(result[i] != NULL)
+    {
+        free(result[i]);
+        i++;
+    }
+    free(result);
+}
+
+
+int     main(void)
+{
+    const char  *s = "apple,banana,cherry,dates";
+    char  delimiter = ',';
+    char    **result;
+    int i;
+
+    result = ft_split(s, delimiter);
+    i = 0;
+    if (result != NULL)
+    {
+        while(result[i] != NULL)
+        {
+            printf("%s\n", result[i]);
+            i++;
+        }
+        free_split(result);
+    }
+    else
+        printf("Failed to split the string.\n");
+    return (0);
+}
+
+
+
+/*
+
+static size_t	ft_strncpy(char *dest, const char *src, size_t size);
+
+static size_t	ft_strncpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 
@@ -112,40 +142,8 @@ static size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (i);
 }
 
-static void    free_split(char **result)
-{
-    int i;
 
-    while(result[i] != NULL)
-    {
-        free(result[i]);
-        i++;
-    }
-    free(result);
-}
-
-int     main(void)
-{
-    const char  *s = "apple,banana,cherry,dates";
-    const char  *delimiter = ",";
-    char    **result;
-    int i;
-
-    result = split(s, delimiter);
-    i = 0;
-    if (result != NULL)
-    {
-        while(result[i] != NULL)
-        {
-            printf("%s\n", result[i]);
-            i++;
-        }
-        free_split(result);
-    }
-    else
-        printf("Failed to split the string.\n");
-    return (0);
-}
+-----
 
 
 
@@ -154,21 +152,6 @@ int     main(void)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 #include "libft.h"
 
 static void freeup_str(char **strs, int count);
@@ -293,7 +276,7 @@ static void freeup_str(char **strs, int count)
 
 
 
-/* what the github gave me 
+what the github gave me 
 static void	freeup_str(char *strs)
 {
 	int	i;

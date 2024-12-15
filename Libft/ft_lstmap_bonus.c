@@ -1,12 +1,5 @@
 #include "libft.h"
 
-typedef struct s_list
-{
-    void *content;
-    s_list *next;
-
-}               t_list;
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
@@ -36,10 +29,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 }
 
 // this implementation has a head node WITH data, see if that's correct
-
-
-
-
-
-
-

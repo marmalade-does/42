@@ -1,14 +1,4 @@
-
-
-
-typedef struct s_list
-{
-    void *content;
-    s_list *next;
-
-}               t_list;
-
-
+#include "libft.h"
 
 void ft_lstclear(t_list **lst, void (*del)(void *))
 {

@@ -1,21 +1,9 @@
-
-
-
 #include "libft.h"
-
-typedef struct s_list
-{
-    void *content;
-    s_list *next;
-
-}               t_list;
-
-
 
 void ft_lstiter(t_list *lst, void (*f)(void *))
 {
        
-    if(!lst || !del)
+    if(!lst || !f)
         return;
     while(lst != NULL)
     {

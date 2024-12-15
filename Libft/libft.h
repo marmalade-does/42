@@ -1,19 +1,3 @@
-
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
-
-////////////////////////
-//                    //
-//   ALL FUNCTIONS    //
-//                    //
-////////////////////////
-
-#endif
-
-
-
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
@@ -70,8 +54,3 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 #endif
-
-
-
-
-
