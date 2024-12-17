@@ -3,6 +3,45 @@
 
 
 
+
+
+
+char *get_next_line(fd)
+{
+   char *line;
+   char *temp;
+
+   static char *backup;
+   append_backup(backup)
+   if(backup == NULL)
+      return (NULL);
+   temp = cut_line(backup);
+   line = backup; 
+   backup = temp;
+   temp == NULL
+
+   return();
+
+}
+
+char *
+
+
+char *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 How to Sync VS code across Linux and your laptop ... you need to use your github acount.
 
