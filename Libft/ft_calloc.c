@@ -1,5 +1,7 @@
 #include "libft.h"
 
+// chat says this doesn't handle the case were (count * size) > INT_MAX
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	b;

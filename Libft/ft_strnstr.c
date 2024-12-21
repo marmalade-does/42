@@ -1,6 +1,8 @@
 
 #include "libft.h"
 
+// apparently the stadard lib doesn't handle cases where needle == NULL
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	size_t	i;

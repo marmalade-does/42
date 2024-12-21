@@ -7,33 +7,24 @@
 
 static void	ft_printf_checker(char s, va_list *args, int *len, int *i)
 {
-	if(/*one of the other flags*/)
-	{
-		/*Handle the spcial flags*/
-		/*if you do the first one do you need to be able to do the flags together?*/
-		/*Also hadle with how i works*/
-	}
+	if (s == 's')
+		ft_putstr(va_arg(*args, char *), len);
+	else if (s == 'd' || s == 'i') // this looks like rank check if correct
+		ft_putnbr(va_arg(*args, int), len);
+	else if (s == 'u')
+		ft_put_unsigned_int(va_arg(*args, unsigned int), len);
+	else if (s == 'x')
+		ft_puthex(va_arg(*args, unsigned int), len, 'x');
+	else if (s == 'X')
+		ft_puthex(va_arg(*args, unsigned int), len, 'X');
+	else if (s == 'p')
+		ft_putptr(va_arg(*args, size_t), len);
+	else if (s == 'c')
+		ft_putchar_leng(va_arg(*args, int), len);
+	else if (s == '%')
+		ft_putchar_leng('%', len);
 	else
-	{
-		if (s == 's')
-			ft_putstr(va_arg(*args, char *), len);
-		else if (s == 'd' || s == 'i') // this looks like rank check if correct
-			ft_putnbr(va_arg(*args, int), len);
-		else if (s == 'u')
-			ft_put_unsigned_int(va_arg(*args, unsigned int), len);
-		else if (s == 'x')
-			ft_puthex(va_arg(*args, unsigned int), len, 'x');
-		else if (s == 'X')
-			ft_puthex(va_arg(*args, unsigned int), len, 'X');
-		else if (s == 'p')
-			ft_putptr(va_arg(*args, size_t), len);
-		else if (s == 'c')
-			ft_putchar_leng(va_arg(*args, int), len);
-		else if (s == '%')
-			ft_putchar_leng('%', len);
-		else
-			(*i)--;
-	}
+		(*i)--;
 }
 
 int	ft_printf(const char *string, ...)

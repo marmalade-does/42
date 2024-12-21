@@ -1,7 +1,5 @@
 #include "libft.h"
 
-/*#include <stdio.h>*/
-
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -26,3 +24,6 @@ int	ft_atoi(const char *str)
 	}
 	return (res * neg);
 }
+
+
+

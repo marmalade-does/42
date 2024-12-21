@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_strlen(const char *str)
 {
@@ -9,3 +10,13 @@ int	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
+/*
+void main()
+{
+	char *str = "This is a string"; 
+	int len = strlen(str);
+	printf("h%i", len);
+	return;
+}
+*/
