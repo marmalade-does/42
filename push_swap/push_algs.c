@@ -116,7 +116,7 @@ static void t_dnode *pa(t_dnode **alst, t_dnode **blst)
     t_dnode *b_tail;
 
     if (!*alst)
-        return ;
+        return;
     pa_0 = *alst;
     pb_0 = *blst;
     if (pa_0->next == pa_0)
@@ -152,7 +152,7 @@ static void t_dnode *pb(t_dnode **alst, t_dnode **blst)
     t_dnode *b_tail;
 
     if (!*blst)
-        return ;
+        return;
     pa_0 = *alst;
     pb_0 = *blst;
     if (pb_0->next == pb_0)

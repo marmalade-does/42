@@ -4,32 +4,22 @@
 
 #include "Libft/libft.h"
 
-t_list   *ft_lstmap(t_list *lst, void *(*f)(void *), vod (*del)(void *))
-{
-   t_list *head;
-   t_list *shoot;
-   t_list aux; 
-   
-   if(!(f))
-      return(NULL);
-   shoot = ft_lstnew(lst -> content);
-   if(shoot == NULL)
-      return(NULL);
-   head = shoot; 
-   while(lst != NULL)
-   {
-      aux = ft_lstnew(lst -> content);
-      if (aux == NULL)
-      {
-         ft_lsclear(head, del);
-         return(NULL);
-      }
-      shoot -> next = aux;
-      shoot = aux;  
-      lst = lst -> next;
-   }
-   return(head);
-}
+
+
+
+/*hello this isi */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 How to Sync VS code across Linux and your laptop ... you need to use your github acount.

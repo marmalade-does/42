@@ -43,4 +43,4 @@ fclean: clean
 re: fclean all
 
 # Phony targets
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re

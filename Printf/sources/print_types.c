@@ -1,120 +1,89 @@
 #include "../includes/ft_printf.h"
 
-//character
-
-void	ft_putcharacter_length(char character, int *length)
+void put_charsum(const char c, int *len)
 {
-	write(1, &character, 1);
-	(*length)++;
+	write(1, &c, 1);
+	(*len)++;
 }
 
-//strings
-
-void	ft_putstr(char *args, int *length)
+void str(const char *str, int *len)
 {
-	size_t	i;
+	int i = 0;
 
-	i = 0;
-	if (!args)
+	if(str == NULL)
 	{
 		write(1, "(null)", 6);
-		(*length) += 6;
-		return ;
+		(*len) += 6;
+		return;
 	}
-	while (args[i] != '\0')
+	while(str[i] != '\0')
 	{
-		ft_putcharacter_length(args[i], length);
+		put_charsum(str[i], len);
 		i++;
 	}
 }
 
-//ft_putnbr
-
-void	ft_number(int number, int *length)
+void number(int nb, int *len)
 {
-	if (number == -2147483648)
+	if(nb == INT_MIN)
 	{
 		write(1, "-2147483648", 11);
-		(*length) += 11;
-		return ;
+		(*len) += 11;
+		return;
 	}
-	if (number < 0)
+	if(nb < 0)
 	{
-		ft_putcharacter_length('-', length);
-		ft_number(number * -1, length);
+		put_charsum('-', len);
+		nb *= -1;
 	}
-	else
+	if(nb >= 10)
 	{
-		if (number > 9)
-			ft_number(number / 10, length);
-		ft_putcharacter_length(number % 10 + '0', length);
+		number(nb/10, len);
 	}
+	put_charsum((nb % 10 + '0'), len);
 }
 
-//unsigned int
-
-void	ft_unsigned_int(unsigned int u, int *length)
+void	unsigned_int(unsigned int u, int *len)
 {
 	if (u >= 10)
-		ft_unsigned_int(u / 10, length);
-	ft_putcharacter_length(u % 10 + '0', length);
+		unsigned_int(u / 10, len);
+	put_charsum(u % 10 + '0', len);
 }
 
-//pointer
-
-void	ft_pointer(size_t pointer, int *length)
+void	print_pointer(size_t ptr, int *len)
 {
-	char	str[25]; // isn't this way of assining a str incorrect? (ege fake dynamic programming)
-	int		i;
-	char	*base_character;
+	const char	*hex_arr;
 
-	base_character = "0123456789abcdef";
-	i = 0;
-	write(1, "0x", 2);
-	(*length) += 2;
-	if (pointer == 0)
-	{
-		ft_putcharacter_length('0', length);
-		return ;
-	}
-	while (pointer != 0)
-	{
-		str[i] = base_character[pointer % 16];
-		pointer = pointer / 16;
-		i++;
-	}
-	while (i--)
-	{
-		ft_putcharacter_length(str[i], length);
-	}
+	hex_arr = "0123456789abcdef";
+	if (ptr >= 16)
+		print_pointer(ptr / 16, len);
+	put_charsum(hex_arr[ptr % 16], len);
 }
 
-//hexadecimal - x or X
-
-void	ft_hexadecimal(unsigned int x, int *length, char x_or_x)
+void	hexadecimal_up(unsigned int x, int *len)
 {
-	char	str[25];
-	char	*base_character;
-	int		i;
+	char *hex_arr; 
 
-	if (x_or_x == 'X')
-		base_character = "0123456789ABCDEF";
-	else
-		base_character = "0123456789abcdef";
-	i = 0;
-	if (x == 0)
+	hex_arr = "0123456789ABCDEF";
+	if(x == 0)
+		put_charsum('0', len);
+	if(x >= 16)
 	{
-		ft_putcharacter_length('0', length);
-		return ;
+		hexadecimal_up(x / 16, len);
 	}
-	while (x != 0)
-	{
-		str[i] = base_character [x % 16];
-		x = x / 16;
-		i++;
-	}
-	while (i--)
-		ft_putcharacter_length(str[i], length);
+	put_charsum(hex_arr[x % 16], len);
 }
 
+void	hexadecimal_low(unsigned int x, int *len)
+{
+	char *hex_arr; 
 
+	hex_arr = "0123456789abcdef";
+	if(x == 0)
+		put_charsum('0', len);
+	if(x >= 16)
+	{
+		hexadecimal_low(x / 16, len);
+	}
+	put_charsum(hex_arr[x % 16], len);
+}

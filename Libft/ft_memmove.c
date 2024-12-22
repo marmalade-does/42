@@ -14,8 +14,7 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 			((unsigned char *)s1)[len] = ((unsigned char *)s2)[len];
 		}
 	}
-	else // Can avoid else block, always copy back to front, 
-	     // however copying front to back is more optimal
+	else
 	{
 		len = 0;
 		while (len < n)
