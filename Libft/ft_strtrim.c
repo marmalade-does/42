@@ -8,7 +8,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-
 	i = 0;
 	j = ft_strlen(s1);
 	while (s1[i] && ft_strchr(set, s1[i]))
