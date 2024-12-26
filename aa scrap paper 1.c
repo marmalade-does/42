@@ -1,25 +1,10 @@
+#include <stdio.h>
 
-
-
-
-#include "Libft/libft.h"
-
-
-
-
-/*hello this isi */
-
-
-
-
-
-
-
-
-
-
-
-
+int main(void)
+{
+   printf("Hello world!");
+   return 0;
+}
 
 /*
 How to Sync VS code across Linux and your laptop ... you need to use your github acount.
@@ -75,25 +60,4 @@ If you don’t want to use the built-in sync:
 - Ensure both devices have the same VS Code version to avoid compatibility issues.
 
 Let me know if you need help configuring this! 😊
-
-
-
-
-
-
-
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
