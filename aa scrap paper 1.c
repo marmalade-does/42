@@ -1,10 +1,35 @@
 #include <stdio.h>
 
-int main(void)
+t_list *ft_lstmap(t_list *lst, void (*f)(void *), void (*del)(void))
 {
-   printf("Hello world!");
-   return 0;
+   t_list head;
+   t_list current;
+   t_list aux;
+
+   if(!(lst) || !(f) || !(del))
+      return(NULL);
+   head = ft_lstnew(lst -> content);
+   if (head == NULL)
+      return(NULL);
+   current = head;
+   aux = head;
+   while(lst != NULL)
+   {
+      aux = f(lst -> current);
+      if(aux == NULL)
+      {
+         ft_lstclear(head, del);
+         return (NULL);
+      }
+      current -> next = aux;
+      current = aux;
+      aux = NULL;
+      lst = lst -> next;
+   }
+   return(head);
 }
+
+
 
 /*
 How to Sync VS code across Linux and your laptop ... you need to use your github acount.
