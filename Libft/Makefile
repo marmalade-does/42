@@ -8,7 +8,7 @@ files       = ft_strlen ft_memmove ft_memcpy ft_strlcpy ft_strlcat ft_isalpha ft
 lst_files 	= ft_lstadd_back_bonus ft_lstadd_front_bonus ft_lstclear_bonus ft_lstdelone_bonus ft_lstiter_bonus \
               ft_lstlast_bonus ft_lstmap_bonus ft_lstnew_bonus ft_lstsize_bonus
 CC          = gcc
-CFLAGS      = -Wall -Wextra
+CFLAGS      = -Wall -Wextra -Werror
 NAME        = $(Library).a
 SRC         = $(files:%=%.c)
 OBJ         = $(files:%=%.o)

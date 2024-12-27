@@ -65,8 +65,7 @@ static size_t	count_words(const char *str, char delim)
 	return (count);
 }
 
-/* 
-int	main(void)
+/* int	main(void)
 {
 	char	**result;
 	char	*test_str;
@@ -98,4 +97,4 @@ int	main(void)
 	free(result);
 	return (0);
 }
-*/
+ */
