@@ -1,9 +1,9 @@
-
-
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 1024
+#endif
 
 #ifndef GET_NEXT_LINE
 # define GET_NEXT_LINE
-# define BUFFER_SIZE 1024
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -18,5 +18,3 @@ char	*cut_line(char *backup);
 char	*append_backup(char *backup, int fd);
 
 #endif
-
-
