@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.tcc": "c",
-        "list": "c"
+        "list": "c",
+        "libft.h": "c"
     }
 }
