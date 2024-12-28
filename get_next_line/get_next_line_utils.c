@@ -112,7 +112,7 @@ char	*append_backup(char *backup, int fd)
 			backup = ft_strdup("");
 		if (!backup)
 			return (NULL);
-		temp = strjoin(buffer, backup);
+		temp = ft_strjoin(buffer, backup);
 		free(backup);
 		if (!temp)
 			return (NULL);
