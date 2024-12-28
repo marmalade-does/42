@@ -10,7 +10,7 @@
 // issues with this code: 
 // --- Doesn't implement escape backslashes (is that needed?)
 
-static void	sp_print(char s, va_list *args, int *len, int *i);
+static void	sp_print(char s, va_list *args, int *len);
 
 int	ft_printf(const char *string, ...)
 {
@@ -26,7 +26,7 @@ int	ft_printf(const char *string, ...)
         if (string[i] == '%') // There is no checking for escape backslashes ? 
         {
             i++;
-            sp_print(string[i], &args, &length, &i);
+            sp_print(string[i], &args, &length);
             i++;
         }
         else
@@ -39,7 +39,7 @@ int	ft_printf(const char *string, ...)
     return (length);
 }
 
-static void	sp_print(char s, va_list *args, int *len, int *i)
+static void	sp_print(char s, va_list *args, int *len)
 {
     if (s == 'c')
         put_charsum(va_arg(*args, int), len);
@@ -50,7 +50,7 @@ static void	sp_print(char s, va_list *args, int *len, int *i)
     else if (s == 'x')
         hexadecimal_low(va_arg(*args, unsigned int), len);
     else if (s == 'X')
-        hexadecimal_up(va_args(*args, unsigned int), len);
+        hexadecimal_up(va_arg(*args, unsigned int), len);
     else if (s == 'u')
         unsigned_int(va_arg(*args, unsigned int), len);
     else if (s == 'p')

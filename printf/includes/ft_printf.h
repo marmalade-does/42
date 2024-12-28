@@ -7,6 +7,7 @@
 # include <stdarg.h>
 # include <stddef.h>
 # include <stdlib.h>
+# include <limits.h>
 
 void			put_charsum(char character, int *len);
 void			string(char *args, int *len);
