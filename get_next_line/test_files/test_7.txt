@@ -1,0 +1,3 @@
+Short
+This is a medium-length line.
+This is an extremely long line that should also work with the buffer size being properly handled.

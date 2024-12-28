@@ -135,7 +135,7 @@ char	*cut_line(char *backup)
 		i++;
 	if (backup[i] == '\0')
 		return (NULL);
-	new_backup = ft_substr(backup, (unsigned int)i, (strlen(backup) - i));
+	new_backup = ft_substr(backup, (unsigned int)i, (ft_strlen(backup) - i));
 	if (new_backup == NULL)
 		return (NULL);
 	backup[i + 1] = '\0';
