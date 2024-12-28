@@ -50,13 +50,27 @@ void	unsigned_int(unsigned int u, int *len)
 	put_charsum(u % 10 + '0', len);
 }
 
-void	print_pointer(size_t ptr, int *len)
+void	print_ptr(size_t ptr, int *len)
+{
+	if(ptr == 0)
+	{
+		str("(null)", len);
+	}
+	else
+	{
+		str("0x", len);
+		rec_ptr(ptr, len);
+	}
+	return ;
+}
+
+void	rec_ptr(size_t ptr, int *len)
 {
 	const char	*hex_arr;
 
 	hex_arr = "0123456789abcdef";
 	if (ptr >= 16)
-		print_pointer(ptr / 16, len);
+		rec_ptr(ptr / 16, len);
 	put_charsum(hex_arr[ptr % 16], len);
 }
 
@@ -66,7 +80,10 @@ void	hexadecimal_up(unsigned int x, int *len)
 
 	hex_arr = "0123456789ABCDEF";
 	if(x == 0)
+	{
 		put_charsum('0', len);
+		return ;
+	}
 	if(x >= 16)
 	{
 		hexadecimal_up(x / 16, len);
@@ -80,7 +97,10 @@ void	hexadecimal_low(unsigned int x, int *len)
 
 	hex_arr = "0123456789abcdef";
 	if(x == 0)
+	{
 		put_charsum('0', len);
+		return ;
+	}
 	if(x >= 16)
 	{
 		hexadecimal_low(x / 16, len);
