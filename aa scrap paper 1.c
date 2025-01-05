@@ -1,33 +1,35 @@
-#include <stdio.h>
 
-t_list *ft_lstmap(t_list *lst, void (*f)(void *), void (*del)(void))
+
+
+void ft_foreach(int *tab, int len, void (*f)(int))
 {
-   t_list head;
-   t_list current;
-   t_list aux;
+   int i; 
 
-   if(!(lst) || !(f) || !(del))
-      return(NULL);
-   head = ft_lstnew(lst -> content);
-   if (head == NULL)
-      return(NULL);
-   current = head;
-   aux = head;
-   while(lst != NULL)
+   i = 0
+   while(i < len)
    {
-      aux = f(lst -> current);
-      if(aux == NULL)
-      {
-         ft_lstclear(head, del);
-         return (NULL);
-      }
-      current -> next = aux;
-      current = aux;
-      aux = NULL;
-      lst = lst -> next;
+      f(tab[i]);
+      i++;
    }
-   return(head);
 }
+
+0 2 X X X X 
+
+0 X X 1 1 X
+
+
+
+
+
+0 0 X X X 1
+
+
+ft_errror(char *errmsg, char *file, char *function, int *line)
+
+
+
+
+
 
 
 
