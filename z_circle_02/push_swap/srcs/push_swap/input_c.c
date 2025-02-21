@@ -1,162 +1,147 @@
+#include "../../includes/push_swap.h"
 
-// this file is to check if the input is well done or not hehe
+t_digit	**ft_lister(char **argv); 
+char **ft_spliter(char *argv);
+int	ft_check_doubles_list(t_digit *head);
+void    ft_print_stack(t_digit *head, char in);
+int     ft_hacked_atoi(const char *str);
 
 
-typedef struct      s_dnode
+char	**ft_spliter(char *argv)
 {
-    int            *content;
-    struct s_dnode  *prev;
-    struct s_dnode  *next;
-}                   *t_dnode;
+	char	**result;
 
-int     int_check(char *str); // Checks is the word passed is int || '-'  || '+',
-int    extract_int(s_dnode **alst, char *str); // Takes out the the ints
-int    dup_check(char **alst); // Checks that there are no duplicates
-
-int main(int argc, char *argv[])
-{
-    // transfer them all to your doubly linked list.
-    s_dnode **alst;
-    s_dnode **blst;
-    int i; 
-
-    i = 1;
-    if(argc < 2)   
-    {
-        ft_printf("Not enough arguments");
-        return(1); // need to change the exit phrase later
-    }
-    while(i < argc)
-    {
-        if(!(int_check(argv[i])))
-        {
-            write(2, "Error\n", 6);
-            return;
-        }
-        if(extract_int(alst, argv[i]))
-            return;
-        if(dup_check(alst))
-        {
-            write(2, "Error\n", 6);
-            return;
-        }
-    }
-    return (0);
+	result = ft_split(argv, ' ');
+	if (result == NULL)
+	{
+		ft_error();
+		exit(3);
+	}
+	return (result);
 }
 
-
-// Need to double check some of the safety checks --- write a lot of pseudo-code 
-int extract_int(s_dnode **alst, char *str)
+// remember ony the argv not includinig the program name are passed on.
+t_digit	**ft_lister(char **argv)
 {
-    char **elems;
-    int i;
-    int flag;
+	int		i;
+	int		num;
+	t_digit	**a_stack;
+	t_digit	*current;
+	t_digit	*temp;
+
+	num = ft_hacked_atoi(argv[0]);
+	current = ft_new_digit(num);
+		*a_stack = current;
+	i = 1;
+	while (argv[i])
+	{
+		num = ft_hacked_atoi(argv[i]);
+			// need to make sure that the ft_hack_atoi does exit() without funny buisness
+		temp = ft_new_digit(num);   
+			// doesn't need safety check because program will just exit.
+		current->next = temp;
+		temp->prev = current;
+		current = temp;
+		i++;
+	}
+	current->next = *a_stack;
+	(*a_stack)->prev = current;
+    ft_printf("list, without double check");
+    ft_print_stack(*a_stack, 'a');
+	ft_check_doubles_list(*a_stack);
+	// while loop split them into an array of ints using ft_hack_atoi()
+	// if the atoi finds letter, then remove it,
+	// also "1 -- 45 32" should mean atoi return error
+	// another thing, checks that there are no repeat numbers in the int array
+	// return the int array
+}
+
+// void ft_hack_atoi
+
+// checks for repeated numbers on the linked list.
+// return 0 if no repeats
+// -1 if input error
+// 1 if there is a repeat
+int	ft_check_doubles_list(t_digit *head)
+{
+	t_digit	*current;
+	t_digit	*checker;
+
+	if (!head)
+	{
+		ft_error();
+		exit(3);
+	}
+	current = head;
+	while (current)
+	{
+		checker = current->next;
+		while (checker && checker != head)
+		{
+			if (current->num == checker->num)
+			{
+				ft_error();
+				exit(3);
+			}
+			checker = checker->next;
+		}
+		current = current->next;
+		if (current == head)
+			break ;
+	}
+	return (0);
+}
+
+int	ft_hacked_atoi(const char *str)
+{
+    int		i;
+    int		neg;
+    long	res;
 
     i = 0;
-    flag = 0;
-    elems == NULL;
-    while(str[i] != '\0')
+    neg = 1;
+    res = 0;
+    while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+        i++;
+    if (str[i] == '-' || str[i] == '+')
     {
-        if(isspace(str[i]))
-            flag = 1;
-        if(flag && !(isspace(str[i])))
-        {
-            elems = ft_split(str);
-            break;
-        }
+        if (str[i] == '-')
+            neg *= -1;
         i++;
     }
-    if(elems != NULL)
+    if (!(str[i] >= '0' && str[i] <= '9'))
     {
-        i = 0;
-        while(elems[i] != NULL)
-        {
-            if(!(extract_int(alst, elems[i])))
-                return(1);
-            i++;
-        }
+        ft_error();
+        exit(3);
     }
-    else //just extract the single number from the *str
+    while (str[i] >= '0' && str[i] <= '9')
     {
-        // jest extract one word
+        res = (str[i] - '0') + (res * 10);
+        i++;
     }
-    if(!(int_check(str))
-        return();
+    if (str[i] != '\0' || res * neg < INT_MIN || res * neg > INT_MAX)
+    {
+        ft_error();
+        exit(3);
+    }
+    return ((int)(res * neg));
 }
 
-
-
-
-s_dnode *dnode_new(int num)
+void	ft_print_stack(t_digit *head, char in)
 {
-    s_dnode *new;
+    t_digit	*current;
 
-    new = malloc(sizeof(s_dnode));
-    if(!new)
-        return (NULL);
-    new -> content = malloc(sizeof(int));
-    if(!(new -> content))
+    if (!head)
+        return ;
+    current = head;
+    while (1)
     {
-        free(new);
-        return (NULL);
+        ft_printf("%d\n", current->num);
+        current = current->next;
+        if (current == head)
+            break;
     }
-    new -> prev = NULL
-    new -> next = NULL
-    *(new -> content) = num;
-    return(new);
+    ft_printf("-\n%c\n", in);
 }
-
-void addnode_front(s_dnode **alst, s_dnode *elem)
-{
-    s_dnode *p_0;
-   
-    if(elem == NULL)
-        return;
-    if(*alst == NULL)
-    {
-        elem -> next = elem;
-        elem -> prev = elem;
-    }
-    else
-    {
-        p_0 = *alst;
-        elem -> next = p_0;
-        elem -> prev = p_0 -> prev;
-        (elem -> prev) -> next = elem;
-        (elem -> next) -> prev = elem;
-    }
-    (*alst) = elem;
-}
-
-
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	neg;
-	int	res;
-
-	i = 0;
-	neg = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			neg *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = (str[i] - '0') + (res * 10);
-		i++;
-	}
-	return (res * neg);
-}
-
-
-
-
-
 
 

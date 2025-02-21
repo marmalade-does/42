@@ -1,3 +1,8 @@
+
+## Make sure that this also has the currently unincluded prinitf and libft also need to niclude an error function
+
+
+
 NAME = push_swap
 CC = gcc
 RM = rm -f

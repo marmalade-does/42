@@ -2,6 +2,22 @@
 #include <stdio.h>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * grit to get ti finished
 * realise hoalfway throught that this isn't going to be valuable'
 * decide to continue gven that you have spent so much time on t already
