@@ -46,7 +46,7 @@ t_digit	**ft_lister(char **argv)
 	}
 	current->next = *a_stack;
 	(*a_stack)->prev = current;
-    ft_printf("list, without double check");
+    printf("list, without double check"); // This needs to be change to ft_printf, make sure you get the inicludes ect integrated
     ft_print_stack(*a_stack, 'a');
 	ft_check_doubles_list(*a_stack);
 	// while loop split them into an array of ints using ft_hack_atoi()
@@ -136,12 +136,11 @@ void	ft_print_stack(t_digit *head, char in)
     current = head;
     while (1)
     {
-        ft_printf("%d\n", current->num);
+        printf("%d\n", current->num); // need to change this to ft_printf(), geneerally need to make sure libs and includees are integrated
         current = current->next;
         if (current == head)
             break;
     }
-    ft_printf("-\n%c\n", in);
+    printf("-\n%c\n", in); // need to change this to ft_printf(), geneerally need to make sure libs and includees are integrated
 }
-
 

@@ -30,6 +30,7 @@ void	ft_algorithm(char **argv);
 t_digit *ft_new_digit(int num);
 void	ft_error(void);
 
+
 void		list_args(char **argv, t_digit **stack_a);
 void		ft_add_back(t_digit **stack, t_digit *stack_new);
 t_digit		*ft_digit_new(int content);
