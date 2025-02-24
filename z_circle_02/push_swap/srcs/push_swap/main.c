@@ -11,6 +11,7 @@ int	main(int argc, char **argv)
 
     if (argc <= 1)
     {
+        printf("more arguments needed");
         ft_error();
         exit(1);
     }

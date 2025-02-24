@@ -14,6 +14,7 @@ char	**ft_spliter(char *argv)
 	result = ft_split(argv, ' ');
 	if (result == NULL)
 	{
+		printf("split failed");
 		ft_error();
 		exit(3);
 	}
@@ -69,6 +70,7 @@ int	ft_check_doubles_list(t_digit *head)
 
 	if (!head)
 	{
+		printf("bad head value input into ft_check_doubles_list");
 		ft_error();
 		exit(3);
 	}
@@ -80,6 +82,7 @@ int	ft_check_doubles_list(t_digit *head)
 		{
 			if (current->num == checker->num)
 			{
+				printf("There was a repeat number in the input");
 				ft_error();
 				exit(3);
 			}
@@ -111,7 +114,8 @@ int	ft_hacked_atoi(const char *str)
     }
     if (!(str[i] >= '0' && str[i] <= '9'))
     {
-        ft_error();
+        printf("number input begins with char");
+		ft_error();
         exit(3);
     }
     while (str[i] >= '0' && str[i] <= '9')
@@ -121,7 +125,8 @@ int	ft_hacked_atoi(const char *str)
     }
     if (str[i] != '\0' || res * neg < INT_MIN || res * neg > INT_MAX)
     {
-        ft_error();
+        printf("non-digit chars at end of token");
+		ft_error();
         exit(3);
     }
     return ((int)(res * neg));

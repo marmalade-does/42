@@ -18,7 +18,8 @@ t_digit *ft_new_digit(int num)
     new_digit = (t_digit *)malloc(sizeof(t_digit));
     if (!new_digit)
     {
-        ft_error();
+        printf("malloc meemory alloc failure");
+		ft_error();
         exit(3);
     }
     new_digit->num = num;
