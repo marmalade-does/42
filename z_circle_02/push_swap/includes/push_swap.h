@@ -16,6 +16,8 @@ typedef struct s_digit
     struct s_digit	*prev;
 }	t_digit;
 
+// main.c
+
 // input_c.c
 t_digit	**ft_lister(char **argv);
 char **ft_spliter(char *argv);
@@ -29,6 +31,7 @@ void	ft_algorithm(char **argv);
 // utils1.c
 t_digit *ft_new_digit(int num);
 void	ft_error(void);
+void	ft_free_list(t_digit *stack);
 
 
 void		list_args(char **argv, t_digit **stack_a);

@@ -1,3 +1,4 @@
+
 {
     "version": "2.0.0",
     "tasks": [
@@ -6,15 +7,20 @@
             "type": "shell",
             "command": "gcc",
             "args": [
-                "-g",
-                "${file}",
+                "${workspaceFolder}/z_circle_02/push_swap/srcs/main.c",
+                "${workspaceFolder}/z_circle_02/push_swap/srcs/input_c.c",
+                "${workspaceFolder}/z_circle_02/push_swap/srcs/utils1.c",
+                "-I${workspaceFolder}/z_circle_02/push_swap/includes",
                 "-o",
-                "${workspaceFolder}/a.exe"
+                "${workspaceFolder}/z_circle_02/push_swap/a.out",
+                "-g"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building the C program."
         }
     ]
 }
@@ -24,14 +30,14 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+            "label": "C/C++: gcc build active file",
+            "command": "/usr/bin/gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -47,4 +53,5 @@
         }
     ],
     "version": "2.0.0"
-} */
+}
+*/

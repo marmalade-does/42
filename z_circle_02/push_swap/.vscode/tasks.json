@@ -1,0 +1,47 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "gcc",
+			"args": [
+				"-g",
+				"${workspaceFolder}/src/push_swap/main.c",
+				"${workspaceFolder}/src/push_swap/input_c.c",
+				"${workspaceFolder}/src/push_swap/utils1.c",
+				"-I${workspaceFolder}/includes",
+				"-o",
+				"${workspaceFolder}/bin/output"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": ["$gcc"],
+			"detail": "Generated task for building the project",
+			"options": {
+				"shell": {
+					"args": ["-c", "gcc -g ${workspaceFolder}/src/push_swap/main.c ${workspaceFolder}/src/push_swap/input_c.c ${workspaceFolder}/src/push_swap/utils1.c -I${workspaceFolder}/includes -o ${workspaceFolder}/bin/output >> ${workspaceFolder}/build.log 2>&1"]
+				}
+			}
+		},
+		{
+			"label": "run",
+			"type": "shell",
+			"command": "${workspaceFolder}/bin/output",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		}
+	]
+}

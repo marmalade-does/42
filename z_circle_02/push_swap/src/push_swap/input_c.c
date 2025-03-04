@@ -5,6 +5,12 @@ char **ft_spliter(char *argv);
 int	ft_check_doubles_list(t_digit *head);
 void    ft_print_stack(t_digit *head, char in);
 int     ft_hacked_atoi(const char *str);
+static size_t	count_words(const char *str, char delim);
+
+/*TODO: 
+  * printf() -> ft_printf()
+  * 
+*/
 
 
 char	**ft_spliter(char *argv)
@@ -21,25 +27,47 @@ char	**ft_spliter(char *argv)
 	return (result);
 }
 
-// remember ony the argv not includinig the program name are passed on.
+// remember only the argv not includinig the program name are passed on.
 t_digit	**ft_lister(char **argv)
 {
-	int		i;
-	int		num;
-	t_digit	**a_stack;
-	t_digit	*current;
-	t_digit	*temp;
+	int			i;
+	int			num;
+	int			word_count;
+	t_digit		**a_stack;
+	t_digit		*current;
+	t_digit		*temp;
 
+	if (!argv || !argv[0])
+		return (NULL);
+	word_count = count_words(argv[0], ' ');
+	if (word_count == 0)
+		return (NULL);
+	a_stack = malloc(sizeof(t_digit *) * word_count);
+	if (!a_stack)
+		return (NULL);
 	num = ft_hacked_atoi(argv[0]);
 	current = ft_new_digit(num);
-		*a_stack = current;
+	if (!current)
+	{
+		ft_free_list(*a_stack);
+		free(a_stack);
+		ft_error();
+		exit(3);
+	}
+	*a_stack = current;
 	i = 1;
 	while (argv[i])
 	{
 		num = ft_hacked_atoi(argv[i]);
-			// need to make sure that the ft_hack_atoi does exit() without funny buisness
-		temp = ft_new_digit(num);   
-			// doesn't need safety check because program will just exit.
+		// need to make sure that the fT_hack_atoi does exit () without funny buisness
+		temp = ft_new_digit(num);
+		// doesn't need safety chck becuase program will just exit
+		if (!temp)
+		{
+			ft_free_list(*a_stack);
+			free(a_stack);
+			exit (3);
+		}
 		current->next = temp;
 		temp->prev = current;
 		current = temp;
@@ -47,15 +75,37 @@ t_digit	**ft_lister(char **argv)
 	}
 	current->next = *a_stack;
 	(*a_stack)->prev = current;
-    printf("list, without double check"); // This needs to be change to ft_printf, make sure you get the inicludes ect integrated
-    ft_print_stack(*a_stack, 'a');
+	printf("List, without double check:\n"); // This neds to be changed to ft_printf .. make sure you integrate the includes and stuff
+	ft_print_stack(*a_stack, 'a');
 	ft_check_doubles_list(*a_stack);
+	return (a_stack);
 	// while loop split them into an array of ints using ft_hack_atoi()
 	// if the atoi finds letter, then remove it,
 	// also "1 -- 45 32" should mean atoi return error
 	// another thing, checks that there are no repeat numbers in the int array
 	// return the int array
 }
+
+
+static size_t	count_words(const char *str, char delim)
+{
+	size_t	count;
+
+	count = 0;
+	while (*str)
+	{
+		while (*str == delim)
+			str++;
+		if (*str && *str != delim)
+		{
+			count++;
+			while (*str != delim && *str)
+				str++;
+		}
+	}
+	return (count);
+}
+
 
 // void ft_hack_atoi
 

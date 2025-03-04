@@ -30,6 +30,23 @@ t_digit *ft_new_digit(int num)
     return (new_digit);
 }
 
+void	ft_free_list(t_digit *stack)
+{
+	t_digit	*temp;
+	t_digit	*head;
+
+	if (!stack)
+		return ;
+	head = stack;
+	while (stack->next != head)
+	{
+		temp = stack;
+		stack = stack->next;
+		free(temp);
+	}
+	free(stack);
+}
+
 char	**ft_split(char const *str, char delim)
 {
 	size_t	i;
