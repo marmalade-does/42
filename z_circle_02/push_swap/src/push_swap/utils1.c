@@ -30,7 +30,24 @@ t_digit *ft_new_digit(int num)
     return (new_digit);
 }
 
-void	ft_free_list(t_digit *stack)
+// pass one or more than one list, NEEDS to end with NULL sentinel value.
+void ft_free_lists_or_list(t_digit *a_stack, ...)
+{
+	va_list args;
+	t_digit *current_list;
+
+	va_start(args, a_stack);
+	current_list = a_stack;
+	while (current_list != NULL)
+	{
+		ft_free_list(current_list);
+		current_list = va_arg(args, t_digit *);
+	}
+	va_end(args);
+}
+
+// used for th abov function (ft_free_lists_or_list)
+static void	ft_free_list(t_digit *stack)
 {
 	t_digit	*temp;
 	t_digit	*head;

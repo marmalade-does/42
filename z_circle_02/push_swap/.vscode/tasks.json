@@ -8,7 +8,7 @@
 			"args": [
 				"-g",
 				"${workspaceFolder}/src/push_swap/main.c",
-				"${workspaceFolder}/src/push_swap/input_c.c",
+				"${workspaceFolder}/src/push_swap/in_cleaning.c",
 				"${workspaceFolder}/src/push_swap/utils1.c",
 				"-I${workspaceFolder}/includes",
 				"-o",
@@ -22,7 +22,7 @@
 			"detail": "Generated task for building the project",
 			"options": {
 				"shell": {
-					"args": ["-c", "gcc -g ${workspaceFolder}/src/push_swap/main.c ${workspaceFolder}/src/push_swap/input_c.c ${workspaceFolder}/src/push_swap/utils1.c -I${workspaceFolder}/includes -o ${workspaceFolder}/bin/output >> ${workspaceFolder}/build.log 2>&1"]
+					"args": ["-c", "gcc -g ${workspaceFolder}/src/push_swap/main.c ${workspaceFolder}/src/push_swap/in_cleaning.c ${workspaceFolder}/src/push_swap/utils1.c -I${workspaceFolder}/includes -o ${workspaceFolder}/bin/output >> ${workspaceFolder}/build.log 2>&1"]
 				}
 			}
 		},

@@ -5,7 +5,9 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <stddef.h>
 # include <stdbool.h>
+# include <stdarg.h>
 # include "../libft/libft.h"
 
 typedef struct s_digit
@@ -18,21 +20,28 @@ typedef struct s_digit
 
 // main.c
 
-// input_c.c
+
+// in_cleaning.c
 t_digit	**ft_lister(char **argv);
 char **ft_spliter(char *argv);
 int	ft_check_doubles_list(t_digit *head);
 void    ft_print_stack(t_digit *head, char in);
 int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
 
-// somewehre else
-void	ft_algorithm(char **argv);
+// inpect_list.c
+t_digit	*ft_stacklast(t_digit *stack);
+int		ft_stacksize(t_digit *stack);
+int		ft_min(t_digit *stack);
+int		ft_max(t_digit *stack);
+
+// sort.c
+void ft_sort(t_digit **stack_a, t_digit **stack_b);
+
 
 // utils1.c
 t_digit *ft_new_digit(int num);
 void	ft_error(void);
-void	ft_free_list(t_digit *stack);
-
+void ft_free_lists_or_list(t_digit *a_stack, ...);
 
 void		list_args(char **argv, t_digit **stack_a);
 void		ft_add_back(t_digit **stack, t_digit *stack_new);
@@ -46,7 +55,6 @@ int			sign(int c);
 int			digit(int c);
 int			space(int c);
 void		ft_error(void);
-void		ft_free(t_digit **lst);
 t_digit		*ft_stacklast(t_digit *lst);
 
 void		ft_ra(t_digit **a, int j);
@@ -67,7 +75,7 @@ int			ft_max(t_digit *a);
 int			ft_find_index(t_digit *a, int nbr);
 int			ft_find_place_b(t_digit *stack_b, int nbr_push);
 int			ft_find_place_a(t_digit *a, int nbr);
-void		ft_sort(t_digit **stack_a);
+//void		ft_sort(t_digit **stack_a);
 int			ft_checksorted(t_digit *stack_a);
 void		ft_sort_big(t_digit **stack_a);
 void		ft_sort_three(t_digit **stack_a);
