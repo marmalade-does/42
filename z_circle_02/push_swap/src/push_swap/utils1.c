@@ -23,7 +23,7 @@ t_digit *ft_new_digit(int num)
         exit(3);
     }
     new_digit->num = num;
-    new_digit->i = 0;
+    // new_digit->head = 0; removed the head, will use the double pointer for the head.
     new_digit->next = NULL;
     new_digit->prev = NULL;
 

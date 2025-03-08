@@ -50,7 +50,6 @@ t_digit	**ft_lister(char **argv)
 	if (!current)
 	{
 		ft_free_lists_or_list(*a_stack);
-		free(a_stack);
 		ft_error();
 		exit(3);
 	}
@@ -65,7 +64,6 @@ t_digit	**ft_lister(char **argv)
 		if (!temp)
 		{
 			ft_free_lists_or_list(*a_stack);
-			free(a_stack);
 			exit (3);
 		}
 		current->next = temp;

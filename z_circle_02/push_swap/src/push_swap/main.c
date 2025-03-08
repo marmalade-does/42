@@ -24,8 +24,8 @@ static void	in_cleaning(int argc, char **argv, t_digit ***stack_a, t_digit ***st
 
     if (argc <= 1)
     {
-        printf("more arguments needed");
-        ft_error();
+        // printf("more arguments needed");
+        // ft_error();
         exit(1);
     }
     if (argc == 2)

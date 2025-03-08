@@ -13,7 +13,7 @@
 typedef struct s_digit
 {
     int			num;
-    int			i;
+    // int			i; this was a index variable in the oriiginal code, reemoved cause it doesn't do shieee
     struct s_digit	*next;
     struct s_digit	*prev;
 }	t_digit;
@@ -43,6 +43,25 @@ t_digit *ft_new_digit(int num);
 void	ft_error(void);
 void ft_free_lists_or_list(t_digit *a_stack, ...);
 
+// push_rotate_utils.c
+void		ft_ra(t_digit **stack_a);
+void		ft_rb(t_digit **stack_b);
+void		ft_sa(t_digit **stack_a);
+void		ft_pa(t_digit **stacl_a, t_digit **stack_b);
+void		ft_pb(t_digit **stack_a, t_digit **stack_b);
+void		ft_rra(t_digit **stack_a);
+void		ft_ss(t_digit **stack_a, t_digit **stack_b);
+void		ft_rr(t_digit **stack_a, t_digit **stack_b);
+void		ft_rrr(t_digit **stack_a, t_digit **stack_b);
+
+//#####################333333333333
+
+
+
+
+
+
+
 void		list_args(char **argv, t_digit **stack_a);
 void		ft_add_back(t_digit **stack, t_digit *stack_new);
 t_digit		*ft_digit_new(int content);
@@ -57,17 +76,6 @@ int			space(int c);
 void		ft_error(void);
 t_digit		*ft_stacklast(t_digit *lst);
 
-void		ft_ra(t_digit **a, int j);
-void		ft_rb(t_digit **b, int j);
-void		ft_sa(t_digit **a, int j);
-void		ft_pa(t_digit **a, t_digit **b, int j);
-void		ft_pb(t_digit **stack_a, t_digit **stack_b, int j);
-void		ft_rra(t_digit **a, int j);
-void		ft_ss(t_digit **a, t_digit **b, int j);
-void		ft_rr(t_digit **a, t_digit **b, int j);
-void		ft_rrr_sub(t_digit **b, int j);
-void		ft_rrr(t_digit **a, t_digit **b, int j);
-
 t_digit		*ft_stacklast(t_digit *lst);
 int			ft_stacksize(t_digit *lst);
 int			ft_min(t_digit *a);
@@ -77,8 +85,8 @@ int			ft_find_place_b(t_digit *stack_b, int nbr_push);
 int			ft_find_place_a(t_digit *a, int nbr);
 //void		ft_sort(t_digit **stack_a);
 int			ft_checksorted(t_digit *stack_a);
-void		ft_sort_big(t_digit **stack_a);
-void		ft_sort_three(t_digit **stack_a);
+//void		ft_sort_big(t_digit **stack_a);
+//void		ft_sort_three(t_digit **stack_a);
 t_digit		*ft_parse(int argc, char **argv);
 t_digit		*ft_parse_args_quoted(char **argv);
 void		ft_freestr(char **lst);
