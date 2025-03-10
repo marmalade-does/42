@@ -1,18 +1,17 @@
 
 ## UP NEXT
-* continue from line 31 in push_swap/sort_big.c
+* remove the things at in_cleaning.c:80
 * it uses functions like 
-ft_mesur_dist
-ft_mesur_a
-ft_mesur_b
-ft_find_insert_position
-int	ft_bble_pos
-final_orient
-
+* cheeeck that all your frees are correct. I'm espcecially worried about one in ft_sort_big()
 * Need double check the sort_4_functions
+* in_cleaning1.c:44 remove the printf that says "There was a repeat number in the input"
+
 Remember:
 pa - push to a
 ra - first element turns last
 rra - last element is first
 GRAAAAAAAAA
+
+pa -- to a from b
+pb -- to b from a  
 

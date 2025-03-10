@@ -3,65 +3,29 @@
 static size_t	word_len(const char *str, char delim);
 static size_t	count_words(const char *str, char delim);
 
-//print an error message
-void	ft_error(void)
-{	
-    write (2, "Error\n", 6);
-    exit(1);
+long	ft_abs(int num)
+{
+	if (num >= 0)
+		return ((long)num);
+	return ((long)(-num));
 }
 
 // makes a new digit for on list
-t_digit *ft_new_digit(int num)
+t_digit	*ft_new_digit(int num)
 {
-    t_digit *new_digit;
+	t_digit	*new_digit;
 
-    new_digit = (t_digit *)malloc(sizeof(t_digit));
-    if (!new_digit)
-    {
-        printf("malloc meemory alloc failure");
+	new_digit = (t_digit *)malloc(sizeof(t_digit));
+	if (!new_digit)
+	{
+		printf("malloc meemory alloc failure");
 		ft_error();
-        exit(3);
-    }
-    new_digit->num = num;
-    // new_digit->head = 0; removed the head, will use the double pointer for the head.
-    new_digit->next = NULL;
-    new_digit->prev = NULL;
-
-    return (new_digit);
-}
-
-// pass one or more than one list, NEEDS to end with NULL sentinel value.
-void ft_free_lists_or_list(t_digit *a_stack, ...)
-{
-	va_list args;
-	t_digit *current_list;
-
-	va_start(args, a_stack);
-	current_list = a_stack;
-	while (current_list != NULL)
-	{
-		ft_free_list(current_list);
-		current_list = va_arg(args, t_digit *);
+		exit(3);
 	}
-	va_end(args);
-}
-
-// used for th abov function (ft_free_lists_or_list)
-static void	ft_free_list(t_digit *stack)
-{
-	t_digit	*temp;
-	t_digit	*head;
-
-	if (!stack)
-		return ;
-	head = stack;
-	while (stack->next != head)
-	{
-		temp = stack;
-		stack = stack->next;
-		free(temp);
-	}
-	free(stack);
+	new_digit->num = num;
+	new_digit->next = NULL;
+	new_digit->prev = NULL;
+	return (new_digit);
 }
 
 char	**ft_split(char const *str, char delim)
@@ -123,16 +87,3 @@ static size_t	count_words(const char *str, char delim)
 	}
 	return (count);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

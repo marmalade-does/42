@@ -9,7 +9,7 @@ void	ft_sort_big(t_digit **stack_a, t_digit **stack_b)
 {
 	int *ab_tmp_min;
 	 // first two spaces are for temp min, last to for min ab
-	ab_tmp_min = (int *)malloc(sizeof(int) * 4);
+	ab_tmp_min = (int)malloc(sizeof(int) * 4);
 	ft_bzero(ab_tmp_min, sizeof(int) * 4);
 	if (ab_tmp_min == NULL)
 	{
@@ -33,13 +33,6 @@ void	ft_sort_big(t_digit **stack_a, t_digit **stack_b)
 	free(ab_tmp_min);
 }
 
-/**
- * @brief Performs rotations and pushes the smallest element from stack_a to stack_b.
- * 
- * @param stack_a Pointer to the stack_a.
- * @param stack_b Pointer to the stack_b.
- * @param ab_tmp_min Array containing the minimum distances.
- */
 void	ft_splice_splice(t_digit **stack_a, t_digit **stack_b, int *ab_tmp_min)
 {
 	int a;
@@ -54,13 +47,6 @@ void	ft_splice_splice(t_digit **stack_a, t_digit **stack_b, int *ab_tmp_min)
 	ab_tmp_min[3] = -2147483647;
 }
 
-/**
- * @brief Performs rotations on the stack based on the given distance.
- * 
- * @param stack_x Pointer to the stack.
- * @param x Distance to rotate.
- * @param id Identifier for the stack ('a' or 'b').
- */
 void ft_rotations(t_digit **stack_x, int x, char id)
 {
 	if(x > 0)
@@ -87,13 +73,6 @@ void ft_rotations(t_digit **stack_x, int x, char id)
 	}
 }
 
-/**
- * @brief Measures the distances for the elements in stack_a and stack_b.
- * 
- * @param stack_a Pointer to the stack_a.
- * @param stack_b Pointer to the stack_b.
- * @param ab_tmp_min Array containing the minimum distances.
- */
 void	ft_mesur_dist(t_digit **stack_a, t_digit **stack_b, int *ab_tmp_min)
 {
     int		num;
@@ -113,12 +92,8 @@ void	ft_mesur_dist(t_digit **stack_a, t_digit **stack_b, int *ab_tmp_min)
     }
 }
 
-/**
- * @brief Measures the distance for the elements in stack_a.
- * 
- * @param stack_a Pointer to the stack_a.
- * @param ab_tmp_min Array containing the distances.
- */
+// function assumes a singly linkeed list ->> good this assumption is correct
+
 void	ft_mesur_a(t_digit *stack_a, int *ab_tmp_min)
 {
 	int distance_back;    // backwards needs to use rra
@@ -144,14 +119,8 @@ void	ft_mesur_a(t_digit *stack_a, int *ab_tmp_min)
 	return ;
 }
 
-// ngl there is hella redundency in this code, but damm I just want to fnish
-/**
- * @brief Measures the distance for the elements in stack_b.
- * 
- * @param num The number to measure the distance for.
- * @param stack_b Pointer to the stack_b.
- * @param ab_tmp_min Array containing the distances.
- */
+
+// ngl there is hella redundency in this code, but damm I just want to finish
 void	ft_mesur_b(int num, t_digit *stack_b, int *ab_tmp_min)
 {
 	int		ref_num;
@@ -161,13 +130,6 @@ void	ft_mesur_b(int num, t_digit *stack_b, int *ab_tmp_min)
 	return ;
 }
 
-/**
- * @brief Finds the insert position for the given number in stack_b.
- * 
- * @param num The number to find the insert position for.
- * @param stack_b Pointer to the stack_b.
- * @return int The relative index of the largest number smaller than num.
- */
 int		ft_find_insert_position(int num, t_digit *stack_b)
 {
 	int largest;
@@ -188,13 +150,6 @@ int		ft_find_insert_position(int num, t_digit *stack_b)
 	return (rel_i);
 }
 
-/**
- * @brief Finds the relative index of the largest number in stack_b.
- * 
- * @param largest The largest number to find the index for.
- * @param stack_b Pointer to the stack_b.
- * @return int The relative index of the largest number.
- */
 int	ft_rel_index_largest(int largest, t_digit *stack_b)
 {
 	int	stack_size;
@@ -216,13 +171,6 @@ int	ft_rel_index_largest(int largest, t_digit *stack_b)
 	return (dist);
 }
 
-/**
- * @brief Finds the distance to the largest number in stack_b.
- * 
- * @param largest The largest number to find the distance for.
- * @param stack_b Pointer to the stack_b.
- * @return int The distance to the largest number.
- */
 int	ft_find_dist(int largest, t_digit *stack_b)
 {
 	int		dist_forward;
@@ -251,12 +199,6 @@ int	ft_find_dist(int largest, t_digit *stack_b)
 // This isn't correct, need to change it so that the.
 // Using a simlpe straight doulby linked list.
 // nonee of the fancy partially doubly linked list shit.
-/**
- * @brief Orients the stack_a to the correct position.
- * 
- * @param stack_a Pointer to the stack_a.
- * @param stack_b Pointer to the stack_b.
- */
 void	final_orient(t_digit **stack_a, t_digit **stack_b)
 // this isn't correct go and write this as a propper function.
 {
@@ -287,12 +229,6 @@ void	final_orient(t_digit **stack_a, t_digit **stack_b)
 	exit(0);
 }
 
-/**
- * @brief Finds the steps to the minimum number in the stack.
- * 
- * @param stack Pointer to the stack.
- * @return int The number of steps to the minimum number.
- */
 int	ft_steps_to_min(t_digit **stack)
 {
 	int		min;
@@ -320,18 +256,11 @@ int	ft_steps_to_min(t_digit **stack)
 	return (steps_for);
 }
 
-/**
- * @brief Pushes all elements from stack_b to stack_a.
- * 
- * @param stack_a Pointer to the stack_a.
- * @param stack_b Pointer to the stack_b.
- */
 void	ft_mega_push_a(t_digit **stack_a, t_digit **stack_b)
 {
 	int size;
 	int i;
 
-i = 0;
 	size = ft_stacksize(stack_b);
 	while(i < size)
 	{

@@ -30,6 +30,7 @@ int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
 
 // inpect_list.c
 t_digit	*ft_stacklast(t_digit *stack);
+t_digit	*ft_stackfirst(t_digit *stack);
 int		ft_stacksize(t_digit *stack);
 int		ft_min(t_digit *stack);
 int		ft_max(t_digit *stack);
@@ -37,19 +38,29 @@ int		ft_max(t_digit *stack);
 // sort.c
 void ft_sort(t_digit **stack_a, t_digit **stack_b);
 
+// utils0.c -- contains all the error functions
+void	ft_free_lists_or_list(t_digit *a_stack, ...);
+void	super_fail_exit(t_digit *a_stack, ...);
+void	ft_error(void);
+static void	ft_free_list(t_digit *stack);
 
 // utils1.c
-t_digit *ft_new_digit(int num);
-void	ft_error(void);
-void ft_free_lists_or_list(t_digit *a_stack, ...);
+t_digit	*ft_new_digit(int num);
+long	ft_abs(int num);
+char	**ft_split(char const *str, char delim);
+
+// utils2.c
+char	*ft_read_perm(t_digit **stack);
 
 // push_rotate_utils.c
 void		ft_ra(t_digit **stack_a);
 void		ft_rb(t_digit **stack_b);
 void		ft_sa(t_digit **stack_a);
+void		ft_sb(t_digit **b);
 void		ft_pa(t_digit **stacl_a, t_digit **stack_b);
 void		ft_pb(t_digit **stack_a, t_digit **stack_b);
 void		ft_rra(t_digit **stack_a);
+void		ft_rrb(t_digit **stack_b);
 void		ft_ss(t_digit **stack_a, t_digit **stack_b);
 void		ft_rr(t_digit **stack_a, t_digit **stack_b);
 void		ft_rrr(t_digit **stack_a, t_digit **stack_b);
@@ -104,12 +115,11 @@ int			ft_apply_rarb(t_digit **a, t_digit **b, int c, char s);
 int			ft_apply_rrarrb(t_digit **a, t_digit **b, int c, char s);
 int			ft_apply_rrarb(t_digit **a, t_digit **b, int c, char s);
 int			ft_apply_rarrb(t_digit **a, t_digit **b, int c, char s);
-void		ft_rrb(t_digit **b, int j);
 void		ft_check_sub(t_digit **a, t_digit **b, char *line);
 char		*ft_check(t_digit **a, t_digit **b, char *line);
 void		ft_checker_sub(t_digit **a, t_digit **b, char *line);
 t_digit		*ft_process(int argc, char **argv);
-void		ft_sb(t_digit **b, int j);
+
 void		algorithm(int argc, char **argv);
 void		ft_sort_b_till_3(t_digit **stack_a, t_digit **stack_b);
 t_digit		*ft_sub_process(char **argv);

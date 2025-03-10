@@ -10,6 +10,11 @@
 				"${workspaceFolder}/src/push_swap/main.c",
 				"${workspaceFolder}/src/push_swap/in_cleaning.c",
 				"${workspaceFolder}/src/push_swap/utils1.c",
+				"${workspaceFolder}/src/push_swap/sort_big.c",
+				"${workspaceFolder}/src/push_swap/sort_main.c",
+				"${workspaceFolder}/src/push_swap/sort_three.c",
+				"${workspaceFolder}/src/push_swap/sort_four.c",
+				"${workspaceFolder}/src/push_swap/inspct_list.c",
 				"-I${workspaceFolder}/includes",
 				"-o",
 				"${workspaceFolder}/bin/output"
@@ -22,7 +27,7 @@
 			"detail": "Generated task for building the project",
 			"options": {
 				"shell": {
-					"args": ["-c", "gcc -g ${workspaceFolder}/src/push_swap/main.c ${workspaceFolder}/src/push_swap/in_cleaning.c ${workspaceFolder}/src/push_swap/utils1.c -I${workspaceFolder}/includes -o ${workspaceFolder}/bin/output >> ${workspaceFolder}/build.log 2>&1"]
+					"args": ["-c", "gcc -g ${workspaceFolder}/src/push_swap/main.c ${workspaceFolder}/src/push_swap/in_cleaning.c ${workspaceFolder}/src/push_swap/utils1.c ${workspaceFolder}/src/push_swap/sort_big.c ${workspaceFolder}/src/push_swap/sort_main.c ${workspaceFolder}/src/push_swap/sort_three.c ${workspaceFolder}/src/push_swap/sort_four.c ${workspaceFolder}/src/push_swap/inspct_list.c -I${workspaceFolder}/includes -o ${workspaceFolder}/bin/output >> ${workspaceFolder}/build.log 2>&1"]
 				}
 			}
 		},
