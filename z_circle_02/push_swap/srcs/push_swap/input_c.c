@@ -84,9 +84,6 @@ int extract_int(s_dnode **alst, char *str)
         return();
 }
 
-
-
-
 s_dnode *dnode_new(int num)
 {
     s_dnode *new;

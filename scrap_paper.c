@@ -1,46 +1,22 @@
 #include "./libft/libft.h"
 #include <stdio.h>
 
-
+/* 
 * grit to get ti finished
 * realise hoalfway throught that this isn't going to be valuable'
 * decide to continue gven that you have spent so much time on t already
+ */
 
-
-#include <stdarg.h>
-
-int fr_error_va(char *errmsg, ...)
-{
-	va_list args;
-	char *red;
-
-	va_start(args, errmsg)
-	write(2, errmsg, stlen(errmsg));
-	while((red = va_arg(args, char *)) != NULL)
-		write(2, red, strlen(red));
-	write(2,'\n', 1);
-	va_close(args);
-	return (0);
-}
-
-int ft_error_va(char *errmsg, ...)
-{
-	va_list args;
-	char	*red;
-
-	va_start(args, errmsg);
-	write(2, errmsg, strlen(errmsg));
-	while((red = va_arg(args, char *)) != NULL)
-	{
-		write(2, red, strlen(red))
-	}
-	write(2, "\n", 1);
-	va_end(args);
-	return(0);
-}
+BUFFER_SIZE 1024
 
 
 
+1
+
+
+NEMATODE,
+p
+cnidaris chordatat
 
 
 
