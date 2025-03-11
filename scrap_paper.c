@@ -1,6 +1,22 @@
 #include "./libft/libft.h"
 #include <stdio.h>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 * grit to get ti finished
 * realise hoalfway throught that this isn't going to be valuable'

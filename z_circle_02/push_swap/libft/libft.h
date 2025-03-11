@@ -1,8 +1,12 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -53,5 +57,22 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+
+
+// printf
+int	put_charsum(const char character, int *len);
+int str(const char *str, int *len);
+int	number(int number, int *len);
+int hexadecimal_up(unsigned int x, int *len);
+int	hexadecimal_low(unsigned int x, int *len);
+int	unsigned_int(unsigned int u, int *len);
+int	print_ptr(size_t pointer, int *len);
+int	rec_ptr(size_t ptr, int *len);
+
+int	ft_printf(const char *string, ...);
+
+// error handeling
+
 
 #endif
