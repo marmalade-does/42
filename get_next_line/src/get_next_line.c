@@ -6,7 +6,7 @@
 /*   By: lroberts <marvin@42.barcelona>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:55:51 by lroberts          #+#    #+#             */
-/*   Updated: 2025/02/11 15:59:42 by lroberts         ###   ########.fr       */
+/*   Updated: 2025/03/19 20:42:18 by lroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,29 +28,30 @@ Things that need to improve this code:
  ** @remarks    You need to free the return in the caller function
  */
 
-#include "get_next_line.h"
+#include "../includes/get_next_line.h"
 
 char	*get_next_line(int fd)
 {
 	static char	*backup;
 	char		*line;
-	char		*temp;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0) 
 		return (NULL);
 	backup = append_backup(backup, fd);
 	if (backup == NULL)
 		return (NULL);
 	line = cut_line(backup);
 	if (line == NULL)
+	{
+		free(backup);
 		return (NULL);
-	temp = backup;
-	backup = line;
-	line = temp;
-	temp = NULL;
+	}
+	backup = ft_shave_backup(backup);
+	if(backup == NULL)
+		return (NULL);
 	return (line);
 }
-
+/* 
 int	main(int argc, char **argv)
 {
     int		fd;
@@ -70,8 +71,9 @@ int	main(int argc, char **argv)
     while ((line = get_next_line(fd)) != NULL)
     {
         printf("%s", line);
-        free(line);
+		free(line);
     }
     close(fd);
     return (0);
 }
+ */

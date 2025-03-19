@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "gcc",
+			"args": [
+				"-g",
+				"${workspaceFolder}/src/get_next_line_utils.c",
+				"${workspaceFolder}/src/get_next_line.c",
+				"-I${workspaceFolder}/includes",
+				"-o",
+				"${workspaceFolder}/bin/output"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": ["$gcc"],
+			"detail": "Generated task for building the project"
+		},
+		{
+			"label": "run",
+			"type": "shell",
+			"command": "${workspaceFolder}/bin/output",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		}
+	]
+}

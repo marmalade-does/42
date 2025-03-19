@@ -17,6 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 int		ft_strlen(const char *str);
 char	*ft_strchr(const char *s, int i);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char  *ft_shave_backup(char *backup_unshaven);
 char	*cut_line(char *backup);
 char	*append_backup(char *backup, int fd);
 
