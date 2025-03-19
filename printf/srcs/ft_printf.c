@@ -1,4 +1,4 @@
-#include "../includes/ft_printf.h"
+#include "../include/ft_printf.h"
 
 static int	sp_print(char s, va_list *args, int *len);
 
@@ -57,6 +57,7 @@ static int sp_print(char s, va_list *args, int *len)
     return (0);
 }
 
+/*
 int main()
 {
     // Test %c (single character)
@@ -141,59 +142,4 @@ int main()
 
     return 0;
 }
-
-
-/* 
-#include "../includes/ft_printf.h"
-
-static void	sp_print(char s, va_list *args, int *len);
-
-int	ft_printf(const char *string, ...)
-{
-    va_list	args; // a variable type included in the stdarg.h library
-    int		i;
-    int		length;
-
-    i = 0;
-    length = 0;
-    va_start(args, string);
-    while (string[i] != '\0')
-    {
-        if (string[i] == '%') // There is no checking for escape backslashes ? 
-        {
-            i++;
-            sp_print(string[i], &args, &length);
-            i++;
-        }
-        else
-        {
-            put_charsum(string[i], &length);
-            i++;
-        }
-    }
-    va_end(args);
-    return (length);
-}
-
-static void	sp_print(char s, va_list *args, int *len)
-{
-    if (s == 'c')
-        put_charsum(va_arg(*args, int), len);
-    else if (s == 's')
-        str(va_arg(*args, char *), len);
-    else if (s == 'd' || s == 'i')
-        number(va_arg(*args, int), len);
-    else if (s == 'x')
-        hexadecimal_low(va_arg(*args, unsigned int), len);
-    else if (s == 'X')
-        hexadecimal_up(va_arg(*args, unsigned int), len);
-    else if (s == 'u')
-        unsigned_int(va_arg(*args, unsigned int), len);
-    else if (s == 'p')
-        print_ptr(va_arg(*args, size_t), len);
-    else
-        put_charsum(s, len);
-}
-
- */
-
+*/
