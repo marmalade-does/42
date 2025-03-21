@@ -1,10 +1,6 @@
 #include "../../includes/push_swap.h"
 
-void	ft_sort_four(t_digit **stack_a, t_digit **stack_b);
-void	ft_sort_four_1(t_digit **stack_a, t_digit **stack_b, char *perm_str);
-void	ft_sort_four_2(t_digit **stack_a, t_digit **stack_b, char *perm_str);
-void	ft_sort_four_3(t_digit **stack_a, t_digit **stack_b, char *perm_str);
-void	ft_sort_four_4(t_digit **stack_a, t_digit **stack_b, char *perm_str);
+
 
 void	ft_sort_four(t_digit **stack_a, t_digit **stack_b)
 {

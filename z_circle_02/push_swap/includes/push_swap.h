@@ -44,6 +44,45 @@ void	super_fail_exit(t_digit *a_stack, ...);
 void	ft_error(void);
 static void	ft_free_list(t_digit *stack);
 
+// sort_four.c
+void	ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+void	ft_sort_four_1(t_digit **stack_a, t_digit **stack_b, char *perm_str);
+void	ft_sort_four_2(t_digit **stack_a, t_digit **stack_b, char *perm_str);
+void	ft_sort_four_3(t_digit **stack_a, t_digit **stack_b, char *perm_str);
+void	ft_sort_four_4(t_digit **stack_a, t_digit **stack_b, char *perm_str);
+
+// z_1_algs.c
+void	ft_sort_1243(t_digit **stack_a);
+void	ft_sort_1342(t_digit **stack_a);
+void	ft_sort_1324(t_digit **stack_a);
+void	ft_sort_1423(t_digit **stack_a);
+void	ft_sort_1432(t_digit **stack_a, t_digit **stack_b);
+// z_2_algs.c
+void	ft_sort_2341(t_digit **stack_a);
+void	ft_sort_2413(t_digit **stack_a);
+void	ft_sort_2431(t_digit **stack_a);
+// z_2.1_algs.c
+void	ft_sort_2134(t_digit **stack_a);
+void	ft_sort_2143(t_digit **stack_a, t_digit **stack_b);
+void	ft_sort_2314(t_digit **stack_a, t_digit **stack_b);
+// z_3_algs.c
+void	ft_sort_3241(t_digit **stack_a);
+void	ft_sort_3412(t_digit **stack_a);
+void	ft_sort_3421(t_digit **stack_a);
+// z_3.1_algs.c
+void	ft_sort_3124(t_digit **stack_a);
+void	ft_sort_3142(t_digit **stack_a);
+void	ft_sort_3214(t_digit **stack_a, t_digit **stack_b);
+// z_4_algs.c
+void	ft_sort_4231(t_digit **stack_a);
+void	ft_sort_4312(t_digit **stack_a);
+void	ft_sort_4321(t_digit **stack_a);
+// z_4.1_algs.c
+void	ft_sort_4123(t_digit **stack_a);
+void	ft_sort_4132(t_digit **stack_a);
+void	ft_sort_4213(t_digit **stack_a);
+
+
 // utils1.c
 t_digit	*ft_new_digit(int num);
 long	ft_abs(int num);
@@ -71,7 +110,7 @@ void		ft_rrr(t_digit **stack_a, t_digit **stack_b);
 
 
 
-
+/* 
 
 void		list_args(char **argv, t_digit **stack_a);
 void		ft_add_back(t_digit **stack, t_digit *stack_new);
@@ -124,5 +163,5 @@ void		algorithm(int argc, char **argv);
 void		ft_sort_b_till_3(t_digit **stack_a, t_digit **stack_b);
 t_digit		*ft_sub_process(char **argv);
 void		ft_error_ch(void);
-
+ */
 #endif

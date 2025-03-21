@@ -5,7 +5,7 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Debug bin/output",
+			"name": "Push_swap debugging bin/output",
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/bin/output",

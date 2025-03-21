@@ -32,23 +32,18 @@ int	ft_check_doubles_list(t_digit *head)
 	t_digit	*checker;
 
 	if (!head)
-		return (55);
-	current = head;
+		return (0);
+	current = ft_stackfirst(head);
 	while (current)
 	{
+		// Check in the 'next' direction
 		checker = current->next;
-		while (checker && checker != head)
+		while (checker)
 		{
 			if (current->num == checker->num)
-			{
-				ft_printf("There was a repeat number in the input");
-				return (55);
-			}
+				return (1);
 			checker = checker->next;
 		}
-		current = current->next;
-		if (current == head)
-			break ;
 	}
 	return (0);
 }
@@ -57,7 +52,7 @@ int	ft_check_doubles_list(t_digit *head)
  * @brief Prints the elements of a doubly linked list.
  * 
  * @param head The head of the doubly linked list.
- * @param in The character to print at the end.
+ * @param in The character to print at the end showeing which stack iit is
  */
 void	ft_print_stack(t_digit *head, char in)
 {
@@ -65,13 +60,11 @@ void	ft_print_stack(t_digit *head, char in)
 
 	if (!head)
 		return ;
-	current = head;
-	while (1)
+	current = ft_stackfirst(head);
+	while (current)
 	{
 		printf("%d\n", current->num);
 		current = current->next;
-		if (current == head)
-			break ;
 	}
 	printf("-\n%c\n\n", in);
 }
