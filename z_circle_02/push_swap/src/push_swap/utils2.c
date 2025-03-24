@@ -1,70 +1,9 @@
 #include "../../includes/push_swap.h"
 
-/**
- * @brief Extracts the values from the stack into an array.
- * 
- * @param stack The head of the stack.
- * @param values The array to store the values.
- */
-static void extract_values(t_digit **stack, int *values)
-{
-    t_digit *current;
-    int i;
-
-    current = *stack;
-    i = 0;
-    while (i < 4)
-    {
-        values[i] = current->num;
-        current = current->next;
-        i++;
-    }
-}
-
-/**
- * @brief Determines the order of the values.
- * 
- * @param values The array of values.
- * @param order The array to store the order.
- */
-static void determine_order(int *values, int *order)
-{
-    int i;
-    int j;
-
-    i = 0;
-    while (i < 4)
-    {
-        order[i] = 1;
-        j = 0;
-        while (j < 4)
-        {
-            if (values[i] < values[j])
-                order[i]++;
-            j++;
-        }
-        i++;
-    }
-}
-
-/**
- * @brief Converts the order array to a string.
- * 
- * @param order The array of order.
- * @param result The string to store the result.
- */
-static void order_to_string(int *order, char *result)
-{
-    int i;
-
-    i = 0;
-    while (i < 4)
-    {
-        result[i] = order[i] + '0';
-        i++;
-    }
-    result[4] = '\0';
-}
+static int rank_values(int *values, int *sorted, char *ranked);
+static void sort_values(int *values, int *sorted);
+static void extract_values(t_digit **stack, int *values);
+static void	swap_ints(int *a, int *b);
 
 /**
  * @brief Reads the permutation of four numbers in the stack and returns a string representing their order.
@@ -75,16 +14,120 @@ static void order_to_string(int *order, char *result)
 char	*ft_read_perm(t_digit **stack)
 {
     int values[4];
-    int order[4];
-    char *result;
+    int sorted[4];
+    char *ranked;
 
-    result = (char *)malloc(5 * sizeof(char));
-    if (!result)
+    ranked = (char *)malloc(5 * sizeof(char));
+    if (!ranked)
         return (NULL);
 
     extract_values(stack, values);
-    determine_order(values, order);
-    order_to_string(order, result);
-
-    return (result);
+    sort_values(values, sorted);
+    if (!rank_values(values, sorted, ranked))
+    {
+        free(ranked);
+        return (NULL);
+    }
+    return (ranked);
 }
+
+/**
+ * @brief Assigns ranks to the values based on their positions in the sorted array.
+ * 
+ * @param values The original array of values.
+ * @param sorted The sorted array of values.
+ * @param ranked The output string representing the ranks.
+ * @return int 1 if successful, 0 if an error occurs.
+ */
+static int rank_values(int *values, int *sorted, char *ranked)
+{
+    int i;
+    int j;
+
+    j = 0;
+    while (j < 4) // Iterate through the "values" array
+    {
+        i = 0;
+        while (i < 4 && sorted[i] != values[j]) // Find the position of values[j] in "sorted"
+            i++;
+        if (i == 4) // If the value is not found in the sorted array, return 0
+            return (0);
+        ranked[j] = i + '1'; // Assign the rank (1-based index) as a character
+        j++;
+    }
+    ranked[j] = '\0'; // Null-terminate the ranked string
+    return (1);
+}
+
+/**
+ * @brief Sorts the values into the sorted array using Bubble Sort.
+ * 
+ * @param values The original array of values.
+ * @param sorted The output array to store the sorted values.
+ */
+static void sort_values(int *values, int *sorted)
+{
+    int i;
+    int j;
+
+    // Copy values into the sorted array
+    i = 0;
+    while (i < 4)
+    {
+        sorted[i] = values[i];
+        i++;
+    }
+
+    // Perform Bubble Sort on the sorted array
+    i = 0;
+    while (i < 4)
+    {
+        j = 0;
+        while (j < 3 - i)
+        {
+            if (sorted[j] > sorted[j + 1])
+                swap_ints(&sorted[j], &sorted[j + 1]);
+            j++;
+        }
+        i++;
+    }
+}
+
+/**
+ * @brief Extracts the integer values from the stack into an array.
+ * 
+ * @param stack The head of the stack.
+ * @param values The array to store the extracted values.
+ */
+static void extract_values(t_digit **stack, int *values)
+{
+    t_digit *current;
+    int i;
+
+    current = *stack;
+    i = 0;
+    while (i < 4)
+    {
+        values[i] = current->num; // Extract the integer value directly
+        current = current->next;
+        i++;
+    }
+}
+
+/**
+ * @brief Swaps two integers.
+ * 
+ * @param a Pointer to the first integer.
+ * @param b Pointer to the second integer.
+ */
+static void	swap_ints(int *a, int *b)
+{
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+
+

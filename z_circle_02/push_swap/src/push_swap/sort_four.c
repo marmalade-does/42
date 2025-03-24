@@ -6,7 +6,7 @@ void	ft_sort_four(t_digit **stack_a, t_digit **stack_b)
 {
 	char	*perm_str;
 
-	if (ft_is_sorted(stack_a))
+	if (!(not_sorted(stack_a)))
 		return ;
 	perm_str = ft_read_perm(stack_a);
 	if (perm_str[0] == '1')

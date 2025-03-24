@@ -1,4 +1,4 @@
-#include "../../includes/push_swap.h"
+#include "includes/push_swap.h"
 
 void	ft_mega_push_a(t_digit **stack_a, t_digit **stack_b);
 void	ft_splice_splice(t_digit **stack_a, t_digit **stack_b, int *ab_tmp_min);
@@ -14,7 +14,7 @@ void	ft_sort_big(t_digit **stack_a, t_digit **stack_b)
 	if (ab_tmp_min == NULL)
 	{
 		free(ab_tmp_min);
-		ft_free_lists_or_list(stack_a, stack_b, NULL);
+		ft_free_lists_or_list(*stack_a, *stack_b, NULL);
 		exit(3);
 	}
 	ft_pb(stack_a, stack_b);
@@ -28,8 +28,8 @@ void	ft_sort_big(t_digit **stack_a, t_digit **stack_b)
 	}
 	ft_sort_four(stack_a, stack_b);
 	ft_mega_push_a(stack_a, stack_b);
-	ft_final_orient(stack_a);
-	ft_free_lists_or_list(stack_a, stack_b, NULL);
+	ft_final_orient(stack_a); // ft_final_orient doesn't exist? 
+	ft_free_lists_or_list(*stack_a, *stack_b, NULL);
 	free(ab_tmp_min);
 }
 
@@ -205,14 +205,14 @@ void	final_orient(t_digit **stack_a, t_digit **stack_b)
 	int steps;
 	if (!(*stack_a))
 	{
-		ft_free_lists_or_list(stack_a, stack_b, NULL);
+		ft_free_lists_or_list(*stack_a, *stack_b, NULL);
 		exit(3);
 	}
 	steps = ft_steps_to_min(stack_a);
 	// ft_find_min returns a positive is ned to go forward,
 	//negative iif need to go backwards if (steps == 0)
 	{
-		ft_free_lists_or_list(stack_a, stack_b);
+		ft_free_lists_or_list(*stack_a, *stack_b);
 		exit(0);
 	}
 	if (steps > 0)
@@ -225,7 +225,7 @@ void	final_orient(t_digit **stack_a, t_digit **stack_b)
 		ft_rra(stack_a);
 		steps++;
 	}
-	ft_free_lists_or_list(stack_a, stack_b);
+	ft_free_lists_or_list(*stack_a, *stack_b, NULL);
 	exit(0);
 }
 

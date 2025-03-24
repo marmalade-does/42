@@ -1,10 +1,7 @@
 
-## UP NEXT
-* remove the things at in_cleaning.c:80
-* it uses functions like 
-* cheeeck that all your frees are correct. I'm espcecially worried about one in ft_sort_big()
-* Need double check the sort_4_functions
-* in_cleaning1.c:44 remove the printf that says "There was a repeat number in the input"
+
+functioins to program: 
+* ft_final_orient()
 
 Remember:
 pa - push to a

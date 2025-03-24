@@ -9,7 +9,7 @@ static size_t	count_words(const char *str, char delim);
  * @param argv The array of strings.
  * @return t_digit** The head of the doubly linked list.
  */
-t_digit	**ft_lister(char **argv)
+t_digit	**ft_lister(char **argv, int argc)
 {
 	int		num;
 	int		word_count;
@@ -19,16 +19,16 @@ t_digit	**ft_lister(char **argv)
 
 	if (!argv || !argv[0])
 		return (NULL);
-	word_count = count_words(argv[0], ' ');
-	stack_a = malloc(sizeof(t_digit *) * word_count);
-	if (word_count == 0 || !stack_a)
+	// word_count = count_words(argv[0], ' ');
+	stack_a = malloc(sizeof(t_digit *) * (argc - 1));
+	if ((argc - 1) == 0 || !stack_a)
 	{
-		ft_free_lists_or_list(stack_a, NULL);
+		ft_free_lists_or_list(*stack_a, NULL);
 		ft_error();
 		exit(3);
 	}
-	ft_while_loop(argv, stack_a);
-	ft_printf("List, without double check:\n");
+	ft_while_loop(argv, &stack_a);
+	write(1, "List, without double check:\n", 28);
 	ft_print_stack(*stack_a, 'a');
 	if (ft_check_doubles_list(*stack_a) == 55)
 		super_fail_exit(*stack_a, NULL);
@@ -41,25 +41,25 @@ t_digit	**ft_lister(char **argv)
  * @param argv The array of strings.
  * @param stack_a The head of the doubly linked list.
  */
-void	ft_while_loop(char **argv, t_digit **stack_a)
+void	ft_while_loop(char **argv, t_digit ***stack_a)
 {
 	int		j;
 	int		num;
 	t_digit	*current;
 	t_digit	*temp;
 
-	j = 0;
-	num = ft_hacked_atoi(argv[0], stack_a);
 	current = ft_new_digit(num);
 	if (!current)
-		super_fail_exit(*stack_a, NULL);
-	*stack_a = current;
+		super_fail_exit(**stack_a, NULL);
+	current -> num = ft_hacked_atoi(argv[0], *stack_a); // only reason to pass hacked atoi it to fre it in case	
+	**stack_a = current;
+	j = 1;
 	while (argv[j])
 	{
-		num = ft_hacked_atoi(argv[j], stack_a);
 		temp = ft_new_digit(num);
 		if (!temp)
-			super_fail_exit(*stack_a, NULL);
+			super_fail_exit(**stack_a, NULL);
+		temp -> num = ft_hacked_atoi(argv[j], *stack_a);
 		current->next = temp;
 		temp->prev = current;
 		current = temp;
@@ -100,7 +100,7 @@ static size_t	count_words(const char *str, char delim)
  * @param str The input string.
  * @return int The converted integer.
  */
-int	ft_hacked_atoi(const char *str, t_list **stack_a)
+int	ft_hacked_atoi(const char *str, t_digit **stack_a)
 {
 	int		i;
 	int		neg;

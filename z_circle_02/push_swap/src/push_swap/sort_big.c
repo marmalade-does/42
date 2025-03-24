@@ -1,9 +1,6 @@
 #include "../../includes/push_swap.h"
 
 void	ft_mega_push_a(t_digit **stack_a, t_digit **stack_b);
-void	ft_splice_splice(t_digit **stack_a, t_digit **stack_b, int *ab_tmp_min);
-void	ft_mesur_dist(t_digit **stack_a, t_digit **stack_b, int *ab);
-int		ft_is_sorted(t_digit **stack);
 
 void	ft_sort_big(t_digit **stack_a, t_digit **stack_b)
 {
@@ -14,22 +11,24 @@ void	ft_sort_big(t_digit **stack_a, t_digit **stack_b)
 	if (ab_tmp_min == NULL)
 	{
 		free(ab_tmp_min);
-		ft_free_lists_or_list(stack_a, stack_b, NULL);
-		exit(3);
+		super_fail_exit(*stack_a, *stack_b, NULL);
 	}
 	ft_pb(stack_a, stack_b);
 	// stack_a comes in knowing that it > 4 and that it's not sorted
-	if (ft_stacksize(stack_a) > 4 || !(ft_is_sorted(stack_a)))
+	if (ft_stacksize(*stack_a) > 4 && not_sorted(stack_a)) // change this to an && ?
 		ft_pb(stack_a, stack_b);
-	while (ft_stacksize(stack_a) > 4 && !(ft_is_sorted(stack_a)))
+	while (ft_stacksize(*stack_a) > 4 && not_sorted(stack_a))
 	{
 		ft_mesur_dist(stack_a, stack_b, ab_tmp_min);
 		ft_splice_splice(stack_a, stack_b, ab_tmp_min);
 	}
 	ft_sort_four(stack_a, stack_b);
+	// print_stacks_side_by_side(*stack_a, *stack_b);
 	ft_mega_push_a(stack_a, stack_b);
+	// print_stacks_side_by_side(*stack_a, *stack_b);
 	ft_final_orient(stack_a);
-	ft_free_lists_or_list(stack_a, stack_b, NULL);
+	// print_stacks_side_by_side(*stack_a, *stack_b);
+	ft_free_lists_or_list(*stack_a, *stack_b, NULL);
 	free(ab_tmp_min);
 }
 
@@ -52,39 +51,6 @@ void	ft_splice_splice(t_digit **stack_a, t_digit **stack_b, int *ab_tmp_min)
 	ft_pb(stack_a, stack_b);
 	ab_tmp_min[2] = -2147483647;
 	ab_tmp_min[3] = -2147483647;
-}
-
-/**
- * @brief Performs rotations on the stack based on the given distance.
- * 
- * @param stack_x Pointer to the stack.
- * @param x Distance to rotate.
- * @param id Identifier for the stack ('a' or 'b').
- */
-void ft_rotations(t_digit **stack_x, int x, char id)
-{
-	if(x > 0)
-	{
-		while(x != 0)
-		{
-			if(id == 'a')
-				ft_ra(stack_x);
-			else if(id == 'b')
-				ft_rb(stack_x);
-			x--;
-		}
-	}
-	if(x < 0)
-	{
-		while(x != 0)
-		{
-			if(id == 'a')
-				ft_rra(stack_x);
-			else if(id == 'b')
-				ft_rrb(stack_x);
-			x++;
-		}
-	}
 }
 
 /**

@@ -4,12 +4,13 @@
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
+		
 		{
 			"name": "Push_swap debugging bin/output",
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/bin/output",
-			"args": ["1 2 3 7 3 55"],
+			"args": ["6" , "2", "3", "4", "1"],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
 			"environment": [],
@@ -23,6 +24,30 @@
 				}
 			],
 			"preLaunchTask": "build",
+			"miDebuggerPath": "/usr/bin/gdb",
+			"logging": {
+				"engineLogging": true
+			}
+		},
+		{
+			"name": "pu_swa_a alge debugging",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/bin/debug_push_algs",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "build_debug_push_algs",
 			"miDebuggerPath": "/usr/bin/gdb",
 			"logging": {
 				"engineLogging": true

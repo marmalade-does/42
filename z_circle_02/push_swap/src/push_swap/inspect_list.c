@@ -25,8 +25,12 @@ t_digit	*ft_stackfirst(t_digit *stack)
 {
 	if (!stack)
 		return (NULL);
-	while (stack->prev)
+	while (true)
+	{
+		if((stack -> prev) == NULL)
+			break ;
 		stack = stack->prev;
+	}
 	return (stack);
 }
 
@@ -39,11 +43,13 @@ t_digit	*ft_stackfirst(t_digit *stack)
 int	ft_stacksize(t_digit *stack)
 {
 	size_t	size;
+	t_digit *temp;
 
 	size = 0;
-	while (stack)
+	temp = ft_stackfirst(stack);
+	while (temp)
 	{
-		stack = stack->next;
+		temp = temp->next;
 		size++;
 	}
 	return (size);

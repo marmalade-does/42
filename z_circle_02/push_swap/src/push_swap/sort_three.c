@@ -8,7 +8,7 @@ void	ft_sort_three(t_digit **stack_a)
 	if (max == (*stack_a)->num)
     {
         ft_ra(stack_a);
-        if (!ft_checksorted(*stack_a))
+        if (not_sorted(stack_a))
             ft_sa(stack_a);
     }
     else if (ft_min(*stack_a) == (*stack_a)->num)

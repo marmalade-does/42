@@ -13,7 +13,7 @@ char	**ft_spliter(char *argv)
 	result = ft_split(argv, ' ');
 	if (result == NULL)
 	{
-		ft_printf("split failed");
+		write(1, "split failed", 12);
 		ft_error();
 		exit(3);
 	}
@@ -34,16 +34,18 @@ int	ft_check_doubles_list(t_digit *head)
 	if (!head)
 		return (0);
 	current = ft_stackfirst(head);
+	checker = ft_stackfirst(head);
+
 	while (current)
 	{
-		// Check in the 'next' direction
 		checker = current->next;
 		while (checker)
 		{
 			if (current->num == checker->num)
-				return (1);
+				return (55);
 			checker = checker->next;
 		}
+		current = current->next;
 	}
 	return (0);
 }

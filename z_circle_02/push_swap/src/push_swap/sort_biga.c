@@ -128,14 +128,14 @@ void	final_orient(t_digit **stack_a, t_digit **stack_b)
 	int steps;
 	if (!(*stack_a))
 	{
-		ft_free_lists_or_list(stack_a, stack_b, NULL);
+		ft_free_lists_or_list(*stack_a, *stack_b, NULL);
 		exit(3);
 	}
 	steps = ft_steps_to_min(stack_a);
 	// ft_find_min returns a positive is ned to go forward,
 	//negative iif need to go backwards if (steps == 0)
 	{
-		ft_free_lists_or_list(stack_a, stack_b);
+		ft_free_lists_or_list(*stack_a, *stack_b, NULL);
 		exit(0);
 	}
 	if (steps > 0)
@@ -148,7 +148,7 @@ void	final_orient(t_digit **stack_a, t_digit **stack_b)
 		ft_rra(stack_a);
 		steps++;
 	}
-	ft_free_lists_or_list(stack_a, stack_b);
+	ft_free_lists_or_list(*stack_a, *stack_b, NULL);
 	exit(0);
 }
 

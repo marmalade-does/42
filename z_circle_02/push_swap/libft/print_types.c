@@ -1,4 +1,4 @@
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
 int put_charsum(const char c, int *len)
 {
