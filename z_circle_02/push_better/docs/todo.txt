@@ -1,0 +1,14 @@
+
+
+functioins to program: 
+* ft_final_orient()
+
+Remember:
+pa - push to a
+ra - first element turns last
+rra - last element is first
+GRAAAAAAAAA
+
+pa -- to a from b
+pb -- to b from a  
+

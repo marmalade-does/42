@@ -1,0 +1,10 @@
+
+what to do now
+
+ 
+* Need to initialise the memory for stack_b in the push_swap_no_four/sort_main_be:14
+
+* go through the push_swap og files sid-by-side with the *_be files and
+mak sure the be files have all the auxiliary functions that they need 
+-- make sure that they also have correct pointers and stuff.
+

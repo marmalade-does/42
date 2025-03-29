@@ -1,0 +1,1312 @@
+
+
+
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/input_c.c/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘main’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:14:9: warning: implicit declaration of function ‘not_sorted’; did you mean ‘ft_sort’? [-Wimplicit-function-declaration]
+   14 |     if (not_sorted(stack_a)) // need to make this function
+      |         ^~~~~~~~~~
+      |         ft_sort
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:16:27: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   16 |     ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                           ^~~~~~~
+      |                           |
+      |                           t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘in_cleaning’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:42:35: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   42 |             ft_free_lists_or_list(*stack_b, *stack_a, NULL);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/utils1.c: In function ‘ft_free_lists_or_list’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/utils1.c:50:17: warning: implicit declaration of function ‘ft_free_list’; did you mean ‘ft_freestr’? [-Wimplicit-function-declaration]
+   50 |                 ft_free_list(current_list);
+      |                 ^~~~~~~~~~~~
+      |                 ft_freestr
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/utils1.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/utils1.c:57:17: warning: conflicting types for ‘ft_free_list’; have ‘void(t_digit *)’ {aka ‘void(struct s_digit *)’}
+   57 | static void     ft_free_list(t_digit *stack)
+      |                 ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/utils1.c:57:17: error: static declaration of ‘ft_free_list’ follows non-static declaration
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/utils1.c:50:17: note: previous implicit declaration of ‘ft_free_list’ with type ‘void(t_digit *)’ {aka ‘void(struct s_digit *)’}
+   50 |                 ft_free_list(current_list);
+      |                 ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_sort_big’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:17:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   17 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:22:26: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   22 |         if (ft_stacksize(stack_a) > 4 || !(ft_is_sorted(stack_a)))
+      |                          ^~~~~~~
+      |                          |
+      |                          t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:33:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   33 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:24:29: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   24 |         while (ft_stacksize(stack_a) > 4 && !(ft_is_sorted(stack_a)))
+      |                             ^~~~~~~
+      |                             |
+      |                             t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:33:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   33 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:29:9: warning: implicit declaration of function ‘ft_sort_four’; did you mean ‘ft_sort_big’? [-Wimplicit-function-declaration]
+   29 |         ft_sort_four(stack_a, stack_b);
+      |         ^~~~~~~~~~~~
+      |         ft_sort_big
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:31:9: warning: implicit declaration of function ‘ft_final_orient’ [-Wimplicit-function-declaration]
+   31 |         ft_final_orient(stack_a);
+      |         ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:32:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   32 |         ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_splice_splice’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: warning: implicit declaration of function ‘ft_rotations’ [-Wimplicit-function-declaration]
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:64:6: warning: conflicting types for ‘ft_rotations’; have ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   64 | void ft_rotations(t_digit **stack_x, int x, char id)
+      |      ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: note: previous implicit declaration of ‘ft_rotations’ with type ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_mesur_dist’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:105:9: warning: implicit declaration of function ‘ft_mesur_a’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+  105 |         ft_mesur_a(current_a, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:106:9: warning: implicit declaration of function ‘ft_mesur_b’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+  106 |         ft_mesur_b(num, *stack_b, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:107:13: warning: implicit declaration of function ‘ft_abs’; did you mean ‘ft_ss’? [-Wimplicit-function-declaration]
+  107 |         if (ft_abs(ab_tmp_min[0]) + ft_abs(ab_tmp_min[1]) < ft_abs(ab_tmp_min[2]) + ft_abs(ab_tmp_min[3]))
+      |             ^~~~~~
+      |             ft_ss
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:122:9: warning: conflicting types for ‘ft_mesur_a’; have ‘void(t_digit *, int *)’ {aka ‘void(struct s_digit *, int *)’}
+  122 | void    ft_mesur_a(t_digit *stack_a, int *ab_tmp_min)
+      |         ^~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:105:9: note: previous implicit declaration of ‘ft_mesur_a’ with type ‘void(t_digit *, int *)’ {aka ‘void(struct s_digit *, int *)’}
+  105 |         ft_mesur_a(current_a, ab_tmp_min);
+      |         ^~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:155:9: warning: conflicting types for ‘ft_mesur_b’; have ‘void(int,  t_digit *, int *)’ {aka ‘void(int,  struct s_digit *, int *)’}
+  155 | void    ft_mesur_b(int num, t_digit *stack_b, int *ab_tmp_min)
+      |         ^~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:106:9: note: previous implicit declaration of ‘ft_mesur_b’ with type ‘void(int,  t_digit *, int *)’ {aka ‘void(int,  struct s_digit *, int *)’}
+  106 |         ft_mesur_b(num, *stack_b, ab_tmp_min);
+      |         ^~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_mesur_b’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:159:19: warning: implicit declaration of function ‘ft_find_insert_position’ [-Wimplicit-function-declaration]
+  159 |         ref_num = ft_find_insert_position(num, stack_b);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_find_insert_position’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:187:17: warning: implicit declaration of function ‘ft_rel_index_largest’ [-Wimplicit-function-declaration]
+  187 |         rel_i = ft_rel_index_largest(largest, stack_b);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_rel_index_largest’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:205:16: warning: implicit declaration of function ‘ft_find_dist’ [-Wimplicit-function-declaration]
+  205 |         dist = ft_find_dist(largest, stack_b);
+      |                ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘final_orient’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:266:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  266 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:269:17: warning: implicit declaration of function ‘ft_steps_to_min’ [-Wimplicit-function-declaration]
+  269 |         steps = ft_steps_to_min(stack_a);
+      |                 ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:273:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  273 |                 ft_free_lists_or_list(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:286:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  286 |         ft_free_lists_or_list(stack_a, stack_b);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_steps_to_min’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:303:22: warning: passing argument 1 of ‘ft_min’ from incompatible pointer type [-Wincompatible-pointer-types]
+  303 |         min = ft_min(stack);
+      |                      ^~~~~
+      |                      |
+      |                      t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:33: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_min(t_digit *stack);
+      |                        ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:312:15: warning: implicit declaration of function ‘ft_last’ [-Wimplicit-function-declaration]
+  312 |         tmp = ft_last(stack);
+      |               ^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:312:13: warning: assignment to ‘t_digit *’ {aka ‘struct s_digit *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  312 |         tmp = ft_last(stack);
+      |             ^
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_mega_push_a’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:335:29: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+  335 |         size = ft_stacksize(stack_b);
+      |                             ^~~~~~~
+      |                             |
+      |                             t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:33:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   33 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:7:1: warning: parameter names (without types) in function declaration
+    7 | void ft_sort_u_five(stack_a, stack_b, a_len);
+      | ^~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:18:17: warning: implicit declaration of function ‘ft_sort_big’; did you mean ‘ft_sort’? [-Wimplicit-function-declaration]
+   18 |                 ft_sort_big(stack_a, stack_b);
+      |                 ^~~~~~~~~~~
+      |                 ft_sort
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort_u_five’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_a’ defaults to ‘int’ [-Wimplicit-int]
+   24 | void ft_sort_u_five(stack_a, stack_b, a_len)
+      |      ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_b’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘a_len’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:28:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   28 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:2:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:33:23: warning: passing argument 1 of ‘ft_sa’ makes pointer from integer without a cast [-Wint-conversion]
+   33 |                 ft_sa(stack_a);
+      |                       ^~~~~~~
+      |                       |
+      |                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:49:33: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   49 | void            ft_sa(t_digit **stack_a);
+      |                       ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:34:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   34 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:39:17: warning: implicit declaration of function ‘ft_sort_three’ [-Wimplicit-function-declaration]
+   39 |                 ft_sort_three(stack_a);
+      |                 ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:40:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   40 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:17: warning: implicit declaration of function ‘ft_sort_four’; did you mean ‘ft_sort_u_five’? [-Wimplicit-function-declaration]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                 ^~~~~~~~~~~~
+      |                 ft_sort_u_five
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:46:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   46 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:44:37: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   44 | void ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                            ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c: In function ‘ft_sort_four’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c:13:8: warning: implicit declaration of function ‘ft_is_sorted’; did you mean ‘ft_checksorted’? [-Wimplicit-function-declaration]
+   13 |     if(ft_is_sorted(stack_a))
+      |        ^~~~~~~~~~~~
+      |        ft_checksorted
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c:3:18: warning: ‘ft_read_perm’ used but never defined
+    3 | static char     *ft_read_perm(t_digit **stack); // need to define this function later, *maybe* not make static
+      |                  ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_lister’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:26:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   26 |                 ft_free_lists_or_list(stack_a, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:30:9: warning: implicit declaration of function ‘ft_while_loop’ [-Wimplicit-function-declaration]
+   30 |         ft_while_loop(argv, stack_a);
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:44:9: warning: conflicting types for ‘ft_while_loop’; have ‘void(char **, t_digit **)’ {aka ‘void(char **, struct s_digit **)’}
+   44 | void    ft_while_loop(char **argv, t_digit **stack_a)
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:30:9: note: previous implicit declaration of ‘ft_while_loop’ with type ‘void(char **, t_digit **)’ {aka ‘void(char **, struct s_digit **)’}
+   30 |         ft_while_loop(argv, stack_a);
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_while_loop’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:52:15: error: too many arguments to function ‘ft_hacked_atoi’
+   52 |         num = ft_hacked_atoi(argv[0], stack_a);
+      |               ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: declared here
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:59:23: error: too many arguments to function ‘ft_hacked_atoi’
+   59 |                 num = ft_hacked_atoi(argv[j], stack_a);
+      |                       ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: declared here
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:103:9: error: conflicting types for ‘ft_hacked_atoi’; have ‘int(const char *, t_list **)’ {aka ‘int(const char *, struct s_list **)’}
+  103 | int     ft_hacked_atoi(const char *str, t_list **stack_a)
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: previous declaration of ‘ft_hacked_atoi’ with type ‘int(const char *)’
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_hacked_atoi’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:121:33: warning: passing argument 1 of ‘super_fail_exit’ from incompatible pointer type [-Wincompatible-pointer-types]
+  121 |                 super_fail_exit(*stack_a, NULL);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 t_list * {aka struct s_list *}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:43:34: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_list *’ {aka ‘struct s_list *’}
+   43 | void    super_fail_exit(t_digit *a_stack, ...);
+      |                         ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:128:33: warning: passing argument 1 of ‘super_fail_exit’ from incompatible pointer type [-Wincompatible-pointer-types]
+  128 |                 super_fail_exit(*stack_a, NULL);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 t_list * {aka struct s_list *}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:43:34: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_list *’ {aka ‘struct s_list *’}
+   43 | void    super_fail_exit(t_digit *a_stack, ...);
+      |                         ~~~~~~~~~^~~~~~~
+cc1: fatal error: /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/inspect_list.c: No such file or directory
+compilation terminated.
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘main’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:14:9: warning: implicit declaration of function ‘not_sorted’; did you mean ‘ft_sort’? [-Wimplicit-function-declaration]
+   14 |     if (not_sorted(stack_a)) // need to make this function
+      |         ^~~~~~~~~~
+      |         ft_sort
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:16:27: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   16 |     ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                           ^~~~~~~
+      |                           |
+      |                           t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘in_cleaning’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:42:35: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   42 |             ft_free_lists_or_list(*stack_b, *stack_a, NULL);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_mesur_dist’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:18:9: warning: implicit declaration of function ‘ft_mesur_a’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+   18 |         ft_mesur_a(current_a, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:19:9: warning: implicit declaration of function ‘ft_mesur_b’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+   19 |         ft_mesur_b(num, *stack_b, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_find_insert_position’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:52:17: warning: implicit declaration of function ‘ft_rel_index_largest’ [-Wimplicit-function-declaration]
+   52 |         rel_i = ft_rel_index_largest(largest, stack_b);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_rel_index_largest’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:70:16: warning: implicit declaration of function ‘ft_find_dist’; did you mean ‘ft_free_list’? [-Wimplicit-function-declaration]
+   70 |         dist = ft_find_dist(largest, stack_b);
+      |                ^~~~~~~~~~~~
+      |                ft_free_list
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘final_orient’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:131:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:134:17: warning: implicit declaration of function ‘ft_steps_to_min’ [-Wimplicit-function-declaration]
+  134 |         steps = ft_steps_to_min(stack_a);
+      |                 ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:138:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  138 |                 ft_free_lists_or_list(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:151:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  151 |         ft_free_lists_or_list(stack_a, stack_b);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_sort_big’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:17:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   17 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:22:26: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   22 |         if (ft_stacksize(stack_a) > 4 || !(ft_is_sorted(stack_a)))
+      |                          ^~~~~~~
+      |                          |
+      |                          t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:24:29: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   24 |         while (ft_stacksize(stack_a) > 4 && !(ft_is_sorted(stack_a)))
+      |                             ^~~~~~~
+      |                             |
+      |                             t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:31:9: warning: implicit declaration of function ‘ft_final_orient’ [-Wimplicit-function-declaration]
+   31 |         ft_final_orient(stack_a);
+      |         ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:32:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   32 |         ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_splice_splice’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: warning: implicit declaration of function ‘ft_rotations’ [-Wimplicit-function-declaration]
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:64:6: warning: conflicting types for ‘ft_rotations’; have ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   64 | void ft_rotations(t_digit **stack_x, int x, char id)
+      |      ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: note: previous implicit declaration of ‘ft_rotations’ with type ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_mesur_b’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:133:19: warning: implicit declaration of function ‘ft_find_insert_position’ [-Wimplicit-function-declaration]
+  133 |         ref_num = ft_find_insert_position(num, stack_b);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: fatal error: /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four_algs/z_2_1_algs.c: No such file or directory
+compilation terminated.
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c: In function ‘ft_sort_four’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c:9:13: warning: implicit declaration of function ‘ft_is_sorted’ [-Wimplicit-function-declaration]
+    9 |         if (ft_is_sorted(stack_a))
+      |             ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:7:1: warning: parameter names (without types) in function declaration
+    7 | void ft_sort_u_five(stack_a, stack_b, a_len);
+      | ^~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:18:17: warning: implicit declaration of function ‘ft_sort_big’; did you mean ‘ft_sort_4213’? [-Wimplicit-function-declaration]
+   18 |                 ft_sort_big(stack_a, stack_b);
+      |                 ^~~~~~~~~~~
+      |                 ft_sort_4213
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort_u_five’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_a’ defaults to ‘int’ [-Wimplicit-int]
+   24 | void ft_sort_u_five(stack_a, stack_b, a_len)
+      |      ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_b’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘a_len’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:28:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   28 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:2:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:33:23: warning: passing argument 1 of ‘ft_sa’ makes pointer from integer without a cast [-Wint-conversion]
+   33 |                 ft_sa(stack_a);
+      |                       ^~~~~~~
+      |                       |
+      |                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:97:33: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   97 | void            ft_sa(t_digit **stack_a);
+      |                       ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:34:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   34 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:39:17: warning: implicit declaration of function ‘ft_sort_three’ [-Wimplicit-function-declaration]
+   39 |                 ft_sort_three(stack_a);
+      |                 ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:40:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   40 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:30: warning: passing argument 1 of ‘ft_sort_four’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                              ^~~~~~~
+      |                              |
+      |                              int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:48:32: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   48 | void    ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+      |                      ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:39: warning: passing argument 2 of ‘ft_sort_four’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:48:51: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   48 | void    ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+      |                                         ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:46:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   46 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_three.c: In function ‘ft_sort_three’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_three.c:11:14: warning: implicit declaration of function ‘ft_checksorted’ [-Wimplicit-function-declaration]
+   11 |         if (!ft_checksorted(*stack_a))
+      |              ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_lister’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:26:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   26 |                 ft_free_lists_or_list(stack_a, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:30:9: warning: implicit declaration of function ‘ft_while_loop’ [-Wimplicit-function-declaration]
+   30 |         ft_while_loop(argv, stack_a);
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:44:9: warning: conflicting types for ‘ft_while_loop’; have ‘void(char **, t_digit **)’ {aka ‘void(char **, struct s_digit **)’}
+   44 | void    ft_while_loop(char **argv, t_digit **stack_a)
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:30:9: note: previous implicit declaration of ‘ft_while_loop’ with type ‘void(char **, t_digit **)’ {aka ‘void(char **, struct s_digit **)’}
+   30 |         ft_while_loop(argv, stack_a);
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_while_loop’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:52:15: error: too many arguments to function ‘ft_hacked_atoi’
+   52 |         num = ft_hacked_atoi(argv[0], stack_a);
+      |               ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: declared here
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:59:23: error: too many arguments to function ‘ft_hacked_atoi’
+   59 |                 num = ft_hacked_atoi(argv[j], stack_a);
+      |                       ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: declared here
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:103:9: error: conflicting types for ‘ft_hacked_atoi’; have ‘int(const char *, t_list **)’ {aka ‘int(const char *, struct s_list **)’}
+  103 | int     ft_hacked_atoi(const char *str, t_list **stack_a)
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: previous declaration of ‘ft_hacked_atoi’ with type ‘int(const char *)’
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_hacked_atoi’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:121:33: warning: passing argument 1 of ‘super_fail_exit’ from incompatible pointer type [-Wincompatible-pointer-types]
+  121 |                 super_fail_exit(*stack_a, NULL);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 t_list * {aka struct s_list *}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:43:34: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_list *’ {aka ‘struct s_list *’}
+   43 | void    super_fail_exit(t_digit *a_stack, ...);
+      |                         ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:128:33: warning: passing argument 1 of ‘super_fail_exit’ from incompatible pointer type [-Wincompatible-pointer-types]
+  128 |                 super_fail_exit(*stack_a, NULL);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 t_list * {aka struct s_list *}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:43:34: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_list *’ {aka ‘struct s_list *’}
+   43 | void    super_fail_exit(t_digit *a_stack, ...);
+      |                         ~~~~~~~~~^~~~~~~
+cc1: fatal error: /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/inspect_list.c: No such file or directory
+compilation terminated.
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘main’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:14:9: warning: implicit declaration of function ‘not_sorted’; did you mean ‘ft_sort’? [-Wimplicit-function-declaration]
+   14 |     if (not_sorted(stack_a)) // need to make this function
+      |         ^~~~~~~~~~
+      |         ft_sort
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:16:27: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   16 |     ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                           ^~~~~~~
+      |                           |
+      |                           t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘in_cleaning’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:42:35: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   42 |             ft_free_lists_or_list(*stack_b, *stack_a, NULL);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_mesur_dist’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:18:9: warning: implicit declaration of function ‘ft_mesur_a’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+   18 |         ft_mesur_a(current_a, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:19:9: warning: implicit declaration of function ‘ft_mesur_b’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+   19 |         ft_mesur_b(num, *stack_b, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_find_insert_position’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:52:17: warning: implicit declaration of function ‘ft_rel_index_largest’ [-Wimplicit-function-declaration]
+   52 |         rel_i = ft_rel_index_largest(largest, stack_b);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_rel_index_largest’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:70:16: warning: implicit declaration of function ‘ft_find_dist’; did you mean ‘ft_free_list’? [-Wimplicit-function-declaration]
+   70 |         dist = ft_find_dist(largest, stack_b);
+      |                ^~~~~~~~~~~~
+      |                ft_free_list
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘final_orient’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:131:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:134:17: warning: implicit declaration of function ‘ft_steps_to_min’ [-Wimplicit-function-declaration]
+  134 |         steps = ft_steps_to_min(stack_a);
+      |                 ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:138:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  138 |                 ft_free_lists_or_list(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:151:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  151 |         ft_free_lists_or_list(stack_a, stack_b);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_sort_big’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:17:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   17 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:22:26: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   22 |         if (ft_stacksize(stack_a) > 4 || !(ft_is_sorted(stack_a)))
+      |                          ^~~~~~~
+      |                          |
+      |                          t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:24:29: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   24 |         while (ft_stacksize(stack_a) > 4 && !(ft_is_sorted(stack_a)))
+      |                             ^~~~~~~
+      |                             |
+      |                             t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:31:9: warning: implicit declaration of function ‘ft_final_orient’ [-Wimplicit-function-declaration]
+   31 |         ft_final_orient(stack_a);
+      |         ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:32:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   32 |         ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_splice_splice’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: warning: implicit declaration of function ‘ft_rotations’ [-Wimplicit-function-declaration]
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:64:6: warning: conflicting types for ‘ft_rotations’; have ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   64 | void ft_rotations(t_digit **stack_x, int x, char id)
+      |      ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: note: previous implicit declaration of ‘ft_rotations’ with type ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_mesur_b’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:133:19: warning: implicit declaration of function ‘ft_find_insert_position’ [-Wimplicit-function-declaration]
+  133 |         ref_num = ft_find_insert_position(num, stack_b);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: fatal error: /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four_algs/z_2_1_algs.c: No such file or directory
+compilation terminated.
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c: In function ‘ft_sort_four’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c:9:13: warning: implicit declaration of function ‘ft_is_sorted’ [-Wimplicit-function-declaration]
+    9 |         if (ft_is_sorted(stack_a))
+      |             ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:7:1: warning: parameter names (without types) in function declaration
+    7 | void ft_sort_u_five(stack_a, stack_b, a_len);
+      | ^~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:18:17: warning: implicit declaration of function ‘ft_sort_big’; did you mean ‘ft_sort_4213’? [-Wimplicit-function-declaration]
+   18 |                 ft_sort_big(stack_a, stack_b);
+      |                 ^~~~~~~~~~~
+      |                 ft_sort_4213
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort_u_five’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_a’ defaults to ‘int’ [-Wimplicit-int]
+   24 | void ft_sort_u_five(stack_a, stack_b, a_len)
+      |      ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_b’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘a_len’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:28:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   28 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:2:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:33:23: warning: passing argument 1 of ‘ft_sa’ makes pointer from integer without a cast [-Wint-conversion]
+   33 |                 ft_sa(stack_a);
+      |                       ^~~~~~~
+      |                       |
+      |                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:97:33: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   97 | void            ft_sa(t_digit **stack_a);
+      |                       ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:34:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   34 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:39:17: warning: implicit declaration of function ‘ft_sort_three’ [-Wimplicit-function-declaration]
+   39 |                 ft_sort_three(stack_a);
+      |                 ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:40:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   40 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:30: warning: passing argument 1 of ‘ft_sort_four’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                              ^~~~~~~
+      |                              |
+      |                              int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:48:32: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   48 | void    ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+      |                      ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:39: warning: passing argument 2 of ‘ft_sort_four’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:48:51: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   48 | void    ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+      |                                         ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:46:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   46 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_three.c: In function ‘ft_sort_three’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_three.c:11:14: warning: implicit declaration of function ‘ft_checksorted’ [-Wimplicit-function-declaration]
+   11 |         if (!ft_checksorted(*stack_a))
+      |              ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_lister’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:26:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   26 |                 ft_free_lists_or_list(stack_a, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:30:9: warning: implicit declaration of function ‘ft_while_loop’ [-Wimplicit-function-declaration]
+   30 |         ft_while_loop(argv, stack_a);
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:44:9: warning: conflicting types for ‘ft_while_loop’; have ‘void(char **, t_digit **)’ {aka ‘void(char **, struct s_digit **)’}
+   44 | void    ft_while_loop(char **argv, t_digit **stack_a)
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:30:9: note: previous implicit declaration of ‘ft_while_loop’ with type ‘void(char **, t_digit **)’ {aka ‘void(char **, struct s_digit **)’}
+   30 |         ft_while_loop(argv, stack_a);
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_while_loop’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:52:15: error: too many arguments to function ‘ft_hacked_atoi’
+   52 |         num = ft_hacked_atoi(argv[0], stack_a);
+      |               ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: declared here
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:59:23: error: too many arguments to function ‘ft_hacked_atoi’
+   59 |                 num = ft_hacked_atoi(argv[j], stack_a);
+      |                       ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: declared here
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:103:9: error: conflicting types for ‘ft_hacked_atoi’; have ‘int(const char *, t_list **)’ {aka ‘int(const char *, struct s_list **)’}
+  103 | int     ft_hacked_atoi(const char *str, t_list **stack_a)
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: previous declaration of ‘ft_hacked_atoi’ with type ‘int(const char *)’
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_hacked_atoi’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:121:33: warning: passing argument 1 of ‘super_fail_exit’ from incompatible pointer type [-Wincompatible-pointer-types]
+  121 |                 super_fail_exit(*stack_a, NULL);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 t_list * {aka struct s_list *}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:43:34: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_list *’ {aka ‘struct s_list *’}
+   43 | void    super_fail_exit(t_digit *a_stack, ...);
+      |                         ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:128:33: warning: passing argument 1 of ‘super_fail_exit’ from incompatible pointer type [-Wincompatible-pointer-types]
+  128 |                 super_fail_exit(*stack_a, NULL);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 t_list * {aka struct s_list *}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:43:34: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_list *’ {aka ‘struct s_list *’}
+   43 | void    super_fail_exit(t_digit *a_stack, ...);
+      |                         ~~~~~~~~~^~~~~~~
+cc1: fatal error: /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/inspect_list.c: No such file or directory
+compilation terminated.
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘main’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:14:9: warning: implicit declaration of function ‘not_sorted’; did you mean ‘ft_sort’? [-Wimplicit-function-declaration]
+   14 |     if (not_sorted(stack_a)) // need to make this function
+      |         ^~~~~~~~~~
+      |         ft_sort
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:16:27: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   16 |     ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                           ^~~~~~~
+      |                           |
+      |                           t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘in_cleaning’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:42:35: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   42 |             ft_free_lists_or_list(*stack_b, *stack_a, NULL);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_mesur_dist’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:18:9: warning: implicit declaration of function ‘ft_mesur_a’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+   18 |         ft_mesur_a(current_a, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:19:9: warning: implicit declaration of function ‘ft_mesur_b’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+   19 |         ft_mesur_b(num, *stack_b, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_find_insert_position’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:52:17: warning: implicit declaration of function ‘ft_rel_index_largest’ [-Wimplicit-function-declaration]
+   52 |         rel_i = ft_rel_index_largest(largest, stack_b);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_rel_index_largest’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:70:16: warning: implicit declaration of function ‘ft_find_dist’; did you mean ‘ft_free_list’? [-Wimplicit-function-declaration]
+   70 |         dist = ft_find_dist(largest, stack_b);
+      |                ^~~~~~~~~~~~
+      |                ft_free_list
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘final_orient’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:131:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:134:17: warning: implicit declaration of function ‘ft_steps_to_min’ [-Wimplicit-function-declaration]
+  134 |         steps = ft_steps_to_min(stack_a);
+      |                 ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:138:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  138 |                 ft_free_lists_or_list(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:151:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  151 |         ft_free_lists_or_list(stack_a, stack_b);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_sort_big’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:17:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   17 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:22:26: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   22 |         if (ft_stacksize(stack_a) > 4 || !(ft_is_sorted(stack_a)))
+      |                          ^~~~~~~
+      |                          |
+      |                          t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:24:29: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   24 |         while (ft_stacksize(stack_a) > 4 && !(ft_is_sorted(stack_a)))
+      |                             ^~~~~~~
+      |                             |
+      |                             t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:31:9: warning: implicit declaration of function ‘ft_final_orient’ [-Wimplicit-function-declaration]
+   31 |         ft_final_orient(stack_a);
+      |         ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:32:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   32 |         ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_splice_splice’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: warning: implicit declaration of function ‘ft_rotations’ [-Wimplicit-function-declaration]
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:64:6: warning: conflicting types for ‘ft_rotations’; have ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   64 | void ft_rotations(t_digit **stack_x, int x, char id)
+      |      ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: note: previous implicit declaration of ‘ft_rotations’ with type ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_mesur_b’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:133:19: warning: implicit declaration of function ‘ft_find_insert_position’ [-Wimplicit-function-declaration]
+  133 |         ref_num = ft_find_insert_position(num, stack_b);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: fatal error: /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four_algs/z_2_1_algs.c: No such file or directory
+compilation terminated.
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c: In function ‘ft_sort_four’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c:9:13: warning: implicit declaration of function ‘ft_is_sorted’ [-Wimplicit-function-declaration]
+    9 |         if (ft_is_sorted(stack_a))
+      |             ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:7:1: warning: parameter names (without types) in function declaration
+    7 | void ft_sort_u_five(stack_a, stack_b, a_len);
+      | ^~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:18:17: warning: implicit declaration of function ‘ft_sort_big’; did you mean ‘ft_sort_4213’? [-Wimplicit-function-declaration]
+   18 |                 ft_sort_big(stack_a, stack_b);
+      |                 ^~~~~~~~~~~
+      |                 ft_sort_4213
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort_u_five’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_a’ defaults to ‘int’ [-Wimplicit-int]
+   24 | void ft_sort_u_five(stack_a, stack_b, a_len)
+      |      ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_b’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘a_len’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:28:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   28 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:2:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:33:23: warning: passing argument 1 of ‘ft_sa’ makes pointer from integer without a cast [-Wint-conversion]
+   33 |                 ft_sa(stack_a);
+      |                       ^~~~~~~
+      |                       |
+      |                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:97:33: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   97 | void            ft_sa(t_digit **stack_a);
+      |                       ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:34:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   34 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:39:17: warning: implicit declaration of function ‘ft_sort_three’ [-Wimplicit-function-declaration]
+   39 |                 ft_sort_three(stack_a);
+      |                 ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:40:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   40 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:30: warning: passing argument 1 of ‘ft_sort_four’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                              ^~~~~~~
+      |                              |
+      |                              int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:48:32: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   48 | void    ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+      |                      ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:39: warning: passing argument 2 of ‘ft_sort_four’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:48:51: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   48 | void    ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+      |                                         ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:46:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   46 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_three.c: In function ‘ft_sort_three’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_three.c:11:14: warning: implicit declaration of function ‘ft_checksorted’ [-Wimplicit-function-declaration]
+   11 |         if (!ft_checksorted(*stack_a))
+      |              ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_lister’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:26:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   26 |                 ft_free_lists_or_list(stack_a, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:30:9: warning: implicit declaration of function ‘ft_while_loop’ [-Wimplicit-function-declaration]
+   30 |         ft_while_loop(argv, stack_a);
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:44:9: warning: conflicting types for ‘ft_while_loop’; have ‘void(char **, t_digit **)’ {aka ‘void(char **, struct s_digit **)’}
+   44 | void    ft_while_loop(char **argv, t_digit **stack_a)
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:30:9: note: previous implicit declaration of ‘ft_while_loop’ with type ‘void(char **, t_digit **)’ {aka ‘void(char **, struct s_digit **)’}
+   30 |         ft_while_loop(argv, stack_a);
+      |         ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_while_loop’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:52:15: error: too many arguments to function ‘ft_hacked_atoi’
+   52 |         num = ft_hacked_atoi(argv[0], stack_a);
+      |               ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: declared here
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:59:23: error: too many arguments to function ‘ft_hacked_atoi’
+   59 |                 num = ft_hacked_atoi(argv[j], stack_a);
+      |                       ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: declared here
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:103:9: error: conflicting types for ‘ft_hacked_atoi’; have ‘int(const char *, t_list **)’ {aka ‘int(const char *, struct s_list **)’}
+  103 | int     ft_hacked_atoi(const char *str, t_list **stack_a)
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:29:9: note: previous declaration of ‘ft_hacked_atoi’ with type ‘int(const char *)’
+   29 | int     ft_hacked_atoi(const char *str); // Corrected to ft_hacked_atoi
+      |         ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c: In function ‘ft_hacked_atoi’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:121:33: warning: passing argument 1 of ‘super_fail_exit’ from incompatible pointer type [-Wincompatible-pointer-types]
+  121 |                 super_fail_exit(*stack_a, NULL);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 t_list * {aka struct s_list *}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:43:34: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_list *’ {aka ‘struct s_list *’}
+   43 | void    super_fail_exit(t_digit *a_stack, ...);
+      |                         ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/in_cleaning0.c:128:33: warning: passing argument 1 of ‘super_fail_exit’ from incompatible pointer type [-Wincompatible-pointer-types]
+  128 |                 super_fail_exit(*stack_a, NULL);
+      |                                 ^~~~~~~~
+      |                                 |
+      |                                 t_list * {aka struct s_list *}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:43:34: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_list *’ {aka ‘struct s_list *’}
+   43 | void    super_fail_exit(t_digit *a_stack, ...);
+      |                         ~~~~~~~~~^~~~~~~
+cc1: fatal error: /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/inspect_list.c: No such file or directory
+compilation terminated.
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘main’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:14:9: warning: implicit declaration of function ‘not_sorted’; did you mean ‘ft_sort’? [-Wimplicit-function-declaration]
+   14 |     if (not_sorted(stack_a)) // need to make this function
+      |         ^~~~~~~~~~
+      |         ft_sort
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:16:27: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   16 |     ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                           ^~~~~~~
+      |                           |
+      |                           t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c: In function ‘in_cleaning’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/main.c:42:35: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   42 |             ft_free_lists_or_list(*stack_b, *stack_a, NULL);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_mesur_dist’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:18:9: warning: implicit declaration of function ‘ft_mesur_a’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+   18 |         ft_mesur_a(current_a, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:19:9: warning: implicit declaration of function ‘ft_mesur_b’; did you mean ‘ft_mesur_dist’? [-Wimplicit-function-declaration]
+   19 |         ft_mesur_b(num, *stack_b, ab_tmp_min);
+      |         ^~~~~~~~~~
+      |         ft_mesur_dist
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_find_insert_position’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:52:17: warning: implicit declaration of function ‘ft_rel_index_largest’ [-Wimplicit-function-declaration]
+   52 |         rel_i = ft_rel_index_largest(largest, stack_b);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘ft_rel_index_largest’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:70:16: warning: implicit declaration of function ‘ft_find_dist’; did you mean ‘ft_free_list’? [-Wimplicit-function-declaration]
+   70 |         dist = ft_find_dist(largest, stack_b);
+      |                ^~~~~~~~~~~~
+      |                ft_free_list
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c: In function ‘final_orient’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:131:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  131 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:134:17: warning: implicit declaration of function ‘ft_steps_to_min’ [-Wimplicit-function-declaration]
+  134 |         steps = ft_steps_to_min(stack_a);
+      |                 ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:138:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  138 |                 ft_free_lists_or_list(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_biga.c:151:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+  151 |         ft_free_lists_or_list(stack_a, stack_b);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_sort_big’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:17:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   17 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       t_digit ** {aka struct s_digit **}
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:1:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:22:26: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   22 |         if (ft_stacksize(stack_a) > 4 || !(ft_is_sorted(stack_a)))
+      |                          ^~~~~~~
+      |                          |
+      |                          t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:24:29: warning: passing argument 1 of ‘ft_stacksize’ from incompatible pointer type [-Wincompatible-pointer-types]
+   24 |         while (ft_stacksize(stack_a) > 4 && !(ft_is_sorted(stack_a)))
+      |                             ^~~~~~~
+      |                             |
+      |                             t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:34:39: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   34 | int             ft_stacksize(t_digit *stack);
+      |                              ~~~~~~~~~^~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:31:9: warning: implicit declaration of function ‘ft_final_orient’ [-Wimplicit-function-declaration]
+   31 |         ft_final_orient(stack_a);
+      |         ^~~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:32:31: warning: passing argument 1 of ‘ft_free_lists_or_list’ from incompatible pointer type [-Wincompatible-pointer-types]
+   32 |         ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                               ^~~~~~~
+      |                               |
+      |                               t_digit ** {aka struct s_digit **}
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘t_digit **’ {aka ‘struct s_digit **’}
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_splice_splice’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: warning: implicit declaration of function ‘ft_rotations’ [-Wimplicit-function-declaration]
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: At top level:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:64:6: warning: conflicting types for ‘ft_rotations’; have ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   64 | void ft_rotations(t_digit **stack_x, int x, char id)
+      |      ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:50:9: note: previous implicit declaration of ‘ft_rotations’ with type ‘void(t_digit **, int,  char)’ {aka ‘void(struct s_digit **, int,  char)’}
+   50 |         ft_rotations(stack_a, a, 'a');
+      |         ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c: In function ‘ft_mesur_b’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_big.c:133:19: warning: implicit declaration of function ‘ft_find_insert_position’ [-Wimplicit-function-declaration]
+  133 |         ref_num = ft_find_insert_position(num, stack_b);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+cc1: fatal error: /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four_algs/z_2_1_algs.c: No such file or directory
+compilation terminated.
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c: In function ‘ft_sort_four’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_four.c:9:13: warning: implicit declaration of function ‘ft_is_sorted’ [-Wimplicit-function-declaration]
+    9 |         if (ft_is_sorted(stack_a))
+      |             ^~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:7:1: warning: parameter names (without types) in function declaration
+    7 | void ft_sort_u_five(stack_a, stack_b, a_len);
+      | ^~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:18:17: warning: implicit declaration of function ‘ft_sort_big’; did you mean ‘ft_sort_4213’? [-Wimplicit-function-declaration]
+   18 |                 ft_sort_big(stack_a, stack_b);
+      |                 ^~~~~~~~~~~
+      |                 ft_sort_4213
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c: In function ‘ft_sort_u_five’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_a’ defaults to ‘int’ [-Wimplicit-int]
+   24 | void ft_sort_u_five(stack_a, stack_b, a_len)
+      |      ^~~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘stack_b’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:24:6: warning: type of ‘a_len’ defaults to ‘int’ [-Wimplicit-int]
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:28:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   28 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+In file included from /home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:2:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:33:23: warning: passing argument 1 of ‘ft_sa’ makes pointer from integer without a cast [-Wint-conversion]
+   33 |                 ft_sa(stack_a);
+      |                       ^~~~~~~
+      |                       |
+      |                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:97:33: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   97 | void            ft_sa(t_digit **stack_a);
+      |                       ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:34:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   34 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:39:17: warning: implicit declaration of function ‘ft_sort_three’ [-Wimplicit-function-declaration]
+   39 |                 ft_sort_three(stack_a);
+      |                 ^~~~~~~~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:40:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   40 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:30: warning: passing argument 1 of ‘ft_sort_four’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                              ^~~~~~~
+      |                              |
+      |                              int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:48:32: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   48 | void    ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+      |                      ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:45:39: warning: passing argument 2 of ‘ft_sort_four’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |                 ft_sort_four(stack_a, stack_b);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:48:51: note: expected ‘t_digit **’ {aka ‘struct s_digit **’} but argument is of type ‘int’
+   48 | void    ft_sort_four(t_digit **stack_a, t_digit **stack_b);
+      |                                         ~~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_main.c:46:39: warning: passing argument 1 of ‘ft_free_lists_or_list’ makes pointer from integer without a cast [-Wint-conversion]
+   46 |                 ft_free_lists_or_list(stack_a, stack_b, NULL);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       int
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/../../includes/push_swap.h:42:40: note: expected ‘t_digit *’ {aka ‘struct s_digit *’} but argument is of type ‘int’
+   42 | void    ft_free_lists_or_list(t_digit *a_stack, ...);
+      |                               ~~~~~~~~~^~~~~~~
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_three.c: In function ‘ft_sort_three’:
+/home/simpster-1/dev_stuff/42_coding/42/z_circle_02/push_swap/src/push_swap/sort_three.c:11:14: warning: implicit declaration of function ‘ft_checksorted’ [-Wimplicit-function-declaration]
+   11 |         if (!ft_checksorted(*stack_a))
+      |              ^~~~~~~~~~~~~~

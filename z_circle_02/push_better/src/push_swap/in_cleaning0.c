@@ -41,7 +41,7 @@ t_digit	**ft_lister(char **argv, int argc)
  * @param argv The array of strings.
  * @param stack_a The head of the doubly linked list.
  */
-void	ft_while_loop(char **argv, t_digit ***stack_a)
+void	ft_while_loop(char **argv, t_digit *stack_a)
 {
 	int		j;
 	int		num;
@@ -51,15 +51,15 @@ void	ft_while_loop(char **argv, t_digit ***stack_a)
 	current = ft_new_digit(num);
 	if (!current)
 		return ;
-	current -> num = ft_hacked_atoi(argv[0], *stack_a); // only reason to pass hacked atoi it to fre it in case	
-	**stack_a = current; // this dos seg fault
+	current -> num = ft_hacked_atoi(argv[0], stack_a); // only reason to pass hacked atoi it to fre it in case	
+	stack_a = current;
 	j = 1;
 	while (argv[j])
 	{
 		temp = ft_new_digit(num);
 		if (!temp)
-			super_fail_exit(**stack_a, NULL);
-		temp -> num = ft_hacked_atoi(argv[j], *stack_a);
+			super_fail_exit(stack_a, NULL);
+		temp -> num = ft_hacked_atoi(argv[j], stack_a);
 		current->next = temp;
 		temp->prev = current;
 		current = temp;
@@ -100,7 +100,7 @@ static size_t	count_words(const char *str, char delim)
  * @param str The input string.
  * @return int The converted integer.
  */
-int	ft_hacked_atoi(const char *str, t_digit **stack_a)
+int	ft_hacked_atoi(const char *str, t_digit *stack_a)
 {
 	int		i;
 	int		neg;
@@ -118,13 +118,13 @@ int	ft_hacked_atoi(const char *str, t_digit **stack_a)
 		i++;
 	}
 	if (!(str[i] >= '0' && str[i] <= '9'))
-		super_fail_exit(*stack_a, NULL);
+		super_fail_exit(stack_a, NULL);
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = (str[i] - '0') + (res * 10);
 		i++;
 	}
 	if (str[i] != '\0' || res * neg < INT_MIN || res * neg > INT_MAX)
-		super_fail_exit(*stack_a, NULL);
+		super_fail_exit(stack_a, NULL);
 	return ((int)(res * neg));
 }
