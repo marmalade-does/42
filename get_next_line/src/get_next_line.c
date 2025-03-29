@@ -6,17 +6,12 @@
 /*   By: lroberts <marvin@42.barcelona>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:55:51 by lroberts          #+#    #+#             */
-/*   Updated: 2025/03/19 20:42:18 by lroberts         ###   ########.fr       */
+/*   Updated: 2025/03/29 13:33:37 by lroberts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Things that need to improve this code:
-* I don't think -- (need to test) that this code works for when tehre are
---- >1 '\n' in a biven BUFFER_SIZE read
-* Need to do the extra things that are mentioned in the pdf
-* ---> read the pdf :)
-*/
+#include "../includes/get_next_line.h"
+
 
 /*
  ** @brief      Takes data until \n from file and appends it to end of buffer
@@ -27,9 +22,6 @@ Things that need to improve this code:
  **             the '\n' (allow for eg printf() usage)
  ** @remarks    You need to free the return in the caller function
  */
-
-#include "../includes/get_next_line.h"
-
 char	*get_next_line(int fd)
 {
 	static char	*backup;
@@ -51,11 +43,11 @@ char	*get_next_line(int fd)
 		return (NULL);
 	return (line);
 }
-/* 
-int	main(int argc, char **argv)
+
+int	main (int argc, char **argv)
 {
     int		fd;
-    char	*line;
+	char	*line;
 
     if (argc != 2)
     {
@@ -76,4 +68,3 @@ int	main(int argc, char **argv)
     close(fd);
     return (0);
 }
- */
