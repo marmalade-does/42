@@ -92,6 +92,8 @@ void	ft_mesur_a(t_digit *stack_a, int *ab_tmp_min)
  * @param stack_b Pointer to the stack_b.
  * @param ab_tmp_min Array containing the distances.
  */
+
+// this is poop is removed in *_be version.
 void	ft_mesur_b(int num, t_digit *stack_b, int *ab_tmp_min)
 {
 	int		ref_num;

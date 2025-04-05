@@ -100,6 +100,7 @@ void	ft_pa(t_digit **stack_a, t_digit **stack_b)
     write(1, "pa\n", 3);
 }
 
+// this function is correect / has ben checkd and is good <thumbs up>
 void	ft_pb(t_digit **stack_a, t_digit **stack_b)
 {
     t_digit *head_a;

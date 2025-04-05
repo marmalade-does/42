@@ -13,8 +13,9 @@ char	**ft_spliter(char *argv)
 	result = ft_split(argv, ' ');
 	if (result == NULL)
 	{
-		write(1, "split failed", 12);
+		ft_printf("split failed");
 		ft_error();
+		exit(3);
 	}
 	return (result);
 }
@@ -31,20 +32,46 @@ int	ft_check_doubles_list(t_digit *head)
 	t_digit	*checker;
 
 	if (!head)
-		return (0);
-	current = ft_stackfirst(head);
-	checker = ft_stackfirst(head);
-
+		return (55);
+	current = head;
 	while (current)
 	{
 		checker = current->next;
-		while (checker)
+		while (checker && checker != head)
 		{
 			if (current->num == checker->num)
+			{
+				ft_printf("There was a repeat number in the input");
 				return (55);
+			}
 			checker = checker->next;
 		}
 		current = current->next;
+		if (current == head)
+			break ;
 	}
 	return (0);
+}
+
+/**
+ * @brief Prints the elements of a doubly linked list.
+ * 
+ * @param head The head of the doubly linked list.
+ * @param in The character to print at the end.
+ */
+void	ft_print_stack(t_digit *head, char in)
+{
+	t_digit	*current;
+
+	if (!head)
+		return ;
+	current = head;
+	while (1)
+	{
+		printf("%d\n", current->num);
+		current = current->next;
+		if (current == head)
+			break ;
+	}
+	printf("-\n%c\n\n", in);
 }

@@ -1,7 +1,5 @@
 #include "../../includes/push_swap.h"
 
-void	ft_free_list(t_digit *stack);
-
 // pass one or more than one list, NEEDS to end with NULL sentinel value.
 void	ft_free_lists_or_list(t_digit *a_stack, ...)
 {
@@ -28,28 +26,23 @@ void	ft_free_lists_or_list(t_digit *a_stack, ...)
 void	super_fail_exit(t_digit *a_stack, ...)
 {
 	va_list	args;
-	t_digit	*current_list;
 
 	va_start(args, a_stack);
-	current_list = a_stack;
-	while (current_list != NULL)
-	{
-		ft_free_list(current_list);
-		current_list = va_arg(args, t_digit *);
-	}
+	ft_free_lists_or_list(a_stack, args);
 	va_end(args);
 	ft_error();
+	exit(3);
 }
 
 //print an error message
 void	ft_error(void)
 {
 	write(2, "Error\n", 6);
-	exit(3);
+	exit(1);
 }
 
 // used for th abov function (ft_free_lists_or_list)
-void	ft_free_list(t_digit *stack)
+static void	ft_free_list(t_digit *stack)
 {
 	t_digit	*temp;
 	t_digit	*head;
@@ -57,11 +50,11 @@ void	ft_free_list(t_digit *stack)
 	if (!stack)
 		return ;
 	head = stack;
-	while (head != NULL)
+	while (stack->next != head)
 	{
-		temp = head;
-		head = head->next;
+		temp = stack;
+		stack = stack->next;
 		free(temp);
 	}
-	// free(stack); -- this was a double free / fre of non-alocated memory
+	free(stack);
 }
